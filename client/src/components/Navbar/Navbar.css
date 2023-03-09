@@ -1,0 +1,128 @@
+.app__navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  gap: 500px;
+}
+
+.app__navbar-logo {
+  display: flex;
+  flex-direction: row;
+  text-transform: uppercase;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.app__navbar-logo h1 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  color: #ffffff;
+}
+
+.app__navbar-logo h1:nth-of-type(3) {
+  color: red;
+}
+
+.app__navbar-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app__navbar-links ul {
+  display: flex;
+  list-style: none;
+  text-transform: uppercase;
+  gap: 50px;
+}
+
+.app__navbar-links_item {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  color: #ffffff;
+
+  position: relative;
+}
+
+.app__navbar-links_item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #ffffff;
+  transition: width 0.2s ease-in-out;
+}
+
+.app__navbar-links_item:hover::before {
+  width: 100%;
+}
+
+/* SMALLSCREEN */
+
+.app__navbar-smallscreen {
+  display: none;
+}
+
+.app__navbar-smallscreen svg {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1050px) {
+  .app__navbar {
+    gap: 250px;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .app__navbar-links {
+    display: none;
+  }
+  .app__navbar {
+    gap: 0;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .app__navbar-smallscreen {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .app__navbar-smallscreen_links {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: fit-content;
+  }
+  .app__navbar-smallscreen_links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .app__navbar-smallscreen_links-item {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    color: black;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+}

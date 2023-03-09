@@ -6,15 +6,15 @@ import { Cars, Contact, Home, News, Shop } from "./pages";
 
 const App = () => {
   return (
-    <div>
+    <div className="app">
       <BrowserRouter>
         <Navbar />
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route path="/" exact element={<Shop />} />
-          <Route path="/" exact element={<News />} />
-          <Route path="/" exact element={<Contact />} />
-          <Route path="/" exact element={<Cars />} />
+          <Route path="/shop" exact element={<Shop />} />
+          <Route path="/news" exact element={<News />} />
+          <Route path="/contact" exact element={<Contact />} />
+          <Route path="/cars" exact element={<Cars />} />
         </Routes>
         <Footer />
       </BrowserRouter>
