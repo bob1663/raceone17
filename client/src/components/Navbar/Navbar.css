@@ -4,7 +4,17 @@
   justify-content: center;
   align-items: center;
   height: 100px;
-  gap: 500px;
+
+  transition: 0.5s ease;
+}
+
+.app__navbar-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1140px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .app__navbar-logo {
@@ -65,6 +75,32 @@
   width: 100%;
 }
 
+.app__navbar-links_item.active::before {
+  width: 100%;
+}
+
+/* CHANGE COLOR WHEN useLocation */
+.app__navbar.alt {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.app__navbar-links.alt .app__navbar-links_item {
+  color: #000000;
+}
+
+.app__navbar-links.alt .app__navbar-links_item::before {
+  background-color: #ff0000;
+}
+
+.app__navbar.alt .app__navbar-logo h1 {
+  color: #000000;
+}
+
+.app__navbar.alt h1:nth-of-type(3) {
+  color: red;
+}
+
 /* SMALLSCREEN */
 
 .app__navbar-smallscreen {
@@ -73,25 +109,28 @@
 
 .app__navbar-smallscreen svg {
   cursor: pointer;
+  margin-right: 25px;
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1140px) {
   .app__navbar {
-    gap: 250px;
+    background: #ffffff;
+    transition: 0.5s ease;
   }
-}
-
-@media screen and (max-width: 810px) {
   .app__navbar-links {
     display: none;
   }
-  .app__navbar {
-    gap: 0;
-    justify-content: space-between;
-    padding-left: 2rem;
-    padding-right: 2rem;
+  .app__navbar-logo {
+    margin-left: 25px;
   }
 
+  .app__navbar-logo h1 {
+    color: #000000;
+  }
+
+  .app__navbar-logo h1:nth-of-type(3) {
+    color: red;
+  }
   .app__navbar-smallscreen {
     display: flex;
     justify-content: flex-start;
@@ -116,13 +155,18 @@
     padding: 0;
     width: 100%;
   }
+
+  .app__navbar-smallscreen_links ul li {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
   .app__navbar-smallscreen_links-item {
     font-family: var(--font-sans);
     font-weight: 700;
-    font-size: 14px;
-    line-height: 19px;
-    color: black;
+    font-size: 13px;
+    line-height: 100%;
     text-transform: uppercase;
-    margin-bottom: 1rem;
+    color: #444444;
   }
 }
