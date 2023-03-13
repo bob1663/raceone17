@@ -1,6 +1,6 @@
 footer {
-  position: fixed;
-  bottom: 0;
+  /* position: fixed;
+  bottom: 0; */
 }
 
 .app__footer {
@@ -92,7 +92,6 @@ footer {
   .app__footer-container {
     flex-direction: column;
     justify-content: flex-start;
-    
   }
 
   .app__footer-rights {

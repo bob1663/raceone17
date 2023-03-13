@@ -1,10 +1,15 @@
-import React from 'react';
-import './Home.css';
+import React from "react";
+import "./Home.css";
+import NextButton from "../../assets/NextButton.png";
+import PrevButton from "../../assets/PrevButton.png";
+import { MainCarousel } from "../../components";
 
 const Home = () => {
-  return (
-    <div>Home</div>
-  )
-}
+  return <div className="app__home">
+      <MainCarousel />
+      <MainCarousel />
+      <MainCarousel />
+  </div>;
+};
 
-export default Home
+export default Home;

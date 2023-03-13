@@ -6,6 +6,8 @@
   height: 100px;
 
   transition: 0.5s ease;
+
+  position: absolute;
 }
 
 .app__navbar-container {
