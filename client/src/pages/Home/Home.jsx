@@ -7,8 +7,7 @@ import { MainCarousel } from "../../components";
 const Home = () => {
   return <div className="app__home">
       <MainCarousel />
-      <MainCarousel />
-      <MainCarousel />
+      
   </div>;
 };
 

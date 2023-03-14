@@ -68,3 +68,34 @@
 
   color: black;
 }
+
+/* ANIMATION */
+
+.app__mc-content {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: mc-appear 1s ease-out forwards;
+}
+
+.app__mc-title {
+  animation-delay: 0.5s;
+}
+
+.app__mc-subtitle {
+  animation-delay: 0.75s;
+}
+
+.app__mc-button {
+  animation-delay: 1s;
+}
+
+@keyframes mc-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
