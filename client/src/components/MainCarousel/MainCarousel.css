@@ -74,19 +74,20 @@
 .app__mc-content {
   opacity: 0;
   transform: translateY(20px);
-  animation: mc-appear 1s ease-out forwards;
-}
-
-.app__mc-title {
-  animation-delay: 0.5s;
-}
-
-.app__mc-subtitle {
+  animation: mc-appear 0.75s ease-out forwards;
   animation-delay: 0.75s;
 }
 
+.app__mc-title {
+  animation-delay: 0.25s;
+}
+
+.app__mc-subtitle {
+  animation-delay: 0.5s;
+}
+
 .app__mc-button {
-  animation-delay: 1s;
+  animation-delay: 0.75s;
 }
 
 @keyframes mc-appear {
@@ -97,5 +98,33 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+/* ------------------------------------- */
+
+@media screen and (max-width: 1140px) {
+  .app__mc-content {
+    padding-right: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .app__mc-content h1 {
+    font-size: 44px;
+    line-height: 67px;
+    margin-left: 25px;
+    text-align: end;
+  }
+  .app__mc-content h3 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .app__mc-content_buttons button {
+    font-size: 12px;
+    line-height: 17px;
+  }
+  .app__mc-content_buttons {
+    flex-direction: column;
+    gap: 15px;
   }
 }

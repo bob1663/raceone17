@@ -1,0 +1,47 @@
+ .app__home {
+  display: flex;
+  flex-direction: column;
+}
+
+.app__carousel-buttons {
+  width: 100%;
+  position: absolute;
+  top: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.app__prev-button {
+  left: 0;
+}
+
+.app__next-button {
+  right: 0;
+}
+
+.app__carousel-buttons-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid #ffffff;
+  border-radius: 100px;
+  padding: 23px 26px;
+  cursor: pointer;
+  gap: 17px;
+  transition: transform 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.app__carousel-buttons-content:hover {
+  transform: rotate(360deg);
+  background: rgba(255, 255, 255, 0.3);
+  transition: 0.5s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .app__carousel-buttons {
+    display: none;
+  }
+}
