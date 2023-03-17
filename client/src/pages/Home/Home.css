@@ -1,6 +1,7 @@
  .app__home {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .app__carousel-buttons {
@@ -11,6 +12,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
+  z-index: 1;
 }
 
 .app__prev-button {
@@ -39,6 +41,9 @@
   background: rgba(255, 255, 255, 0.3);
   transition: 0.5s ease;
 }
+/* DOTS */
+
+/* ---- */
 
 @media screen and (max-width: 768px) {
   .app__carousel-buttons {

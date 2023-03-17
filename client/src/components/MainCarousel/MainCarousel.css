@@ -70,45 +70,48 @@
 }
 
 /* ANIMATION */
-
-.app__mc-content {
+.app__mc-title,
+.app__mc-subtitle,
+.app__mc-content_buttons {
   opacity: 0;
-  transform: translateY(20px);
-  animation: mc-appear 0.75s ease-out forwards;
-  animation-delay: 0.75s;
+  transform: translateY(50%);
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
 }
 
 .app__mc-title {
-  animation-delay: 0.25s;
+  animation-name: slideFromBottom;
+  animation-delay: 0.1s;
 }
 
 .app__mc-subtitle {
-  animation-delay: 0.5s;
+  animation-name: slideFromBottom;
+  animation-delay: 0.2s;
 }
 
-.app__mc-button {
-  animation-delay: 0.75s;
+.app__mc-content_buttons{
+  animation-name: slideFromBottom;
+  animation-delay: 0.3s;
 }
 
-@keyframes mc-appear {
-  0% {
+@keyframes slideFromBottom {
+  from {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(50%);
   }
-  100% {
+  to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0%);
   }
 }
+
 /* ------------------------------------- */
 
 @media screen and (max-width: 1140px) {
   .app__mc-content {
     padding-right: 25px;
   }
-}
-
-@media screen and (max-width: 768px) {
   .app__mc-content h1 {
     font-size: 44px;
     line-height: 67px;
@@ -123,6 +126,9 @@
     font-size: 12px;
     line-height: 17px;
   }
+}
+
+@media screen and (max-width: 768px) {
   .app__mc-content_buttons {
     flex-direction: column;
     gap: 15px;
