@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "./Home.css";
 import NextButton from "../../assets/NextButton.png";
 import PrevButton from "../../assets/PrevButton.png";
@@ -7,8 +7,10 @@ import { MainCarousel } from "../../components";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { data } from "../../constants";
 
 const settings = {
+  fade: true,
   dots: true,
   infinite: true,
   speed: 500,
@@ -66,6 +68,7 @@ const settings = {
 };
 
 const Home = () => {
+ 
   const [isHomeHovered, setIsHomeHovered] = useState(false);
 
   const handleHomeMouseEnter = () => {
@@ -85,6 +88,10 @@ const Home = () => {
   const handlePrevSlide = () => {
     sliderRef.current.slickPrev();
   };
+
+  // -------------------------------------------
+  
+  // -------------------------------------------
 
   return (
     <div
@@ -109,11 +116,10 @@ const Home = () => {
           <img src={NextButton} alt="Next" className="app__next-button" />
         </div>
       </div>
-      <Slider ref={sliderRef} {...settings}>
-        <MainCarousel />
-        <MainCarousel />
-        <MainCarousel />
-        <MainCarousel />
+      <Slider ref={sliderRef} {...settings} >
+        {data.home.map((home) => (
+          <MainCarousel data={home} key={home.title} />
+        ))}
       </Slider>
     </div>
   );

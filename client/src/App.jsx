@@ -9,14 +9,17 @@ const App = () => {
     <div className="app">
       <BrowserRouter>
         <Navbar />
-        <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route path="/shop" exact element={<Shop />} />
-          <Route path="/news" exact element={<News />} />
-          <Route path="/contact" exact element={<Contact />} />
-          <Route path="/cars" exact element={<Cars />} />
-        </Routes>
-        <Footer />
+        {/* TEMPORARY CLASS */}
+        <div className="main-content">
+          <Routes>
+            <Route path="/" exact element={<Home />} />
+            <Route path="/shop" exact element={<Shop />} />
+            <Route path="/news" exact element={<News />} />
+            <Route path="/contact" exact element={<Contact />} />
+            <Route path="/cars" exact element={<Cars />} />
+          </Routes>
+        </div>
+        <Footer className="foooter" />
       </BrowserRouter>
     </div>
   );
