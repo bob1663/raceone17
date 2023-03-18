@@ -10,7 +10,6 @@ import "slick-carousel/slick/slick-theme.css";
 import { data } from "../../constants";
 
 const settings = {
-  fade: true,
   dots: true,
   infinite: true,
   speed: 500,
@@ -90,7 +89,7 @@ const Home = () => {
   };
 
   // -------------------------------------------
-  
+    const [currentSlide,setCurrentSlide] = useState(0);
   // -------------------------------------------
 
   return (
@@ -116,9 +115,9 @@ const Home = () => {
           <img src={NextButton} alt="Next" className="app__next-button" />
         </div>
       </div>
-      <Slider ref={sliderRef} {...settings} >
-        {data.home.map((home) => (
-          <MainCarousel data={home} key={home.title} />
+      <Slider ref={sliderRef} {...settings} afterChange={(currentSlide)=> setCurrentSlide(currentSlide)}>
+        {data.home.map((home, index) => (
+          <MainCarousel data={home} key={home.title} index={index} currentSlide={currentSlide}/>
         ))}
       </Slider>
     </div>

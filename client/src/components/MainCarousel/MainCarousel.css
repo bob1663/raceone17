@@ -41,6 +41,7 @@
   display: flex;
   flex-direction: row;
   gap: 30px;
+  
 }
 
 .app__mc-content_buttons button {
@@ -72,11 +73,10 @@
 /* ANIMATION */
 .app__mc-title,
 .app__mc-subtitle,
-.app__mc-content_buttons
- {
+.app__mc-content_buttons {
   opacity: 0;
   transform: translateY(50%);
-  animation-duration: 0.3s;
+  animation-duration: 0.5s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-out;
   animation-name: slideFromBottom;
@@ -84,17 +84,17 @@
 
 .app__mc-title {
   animation-name: slideFromBottom;
-  animation-delay: 0.1s;
+  animation-delay: 0.3s;
 }
 
 .app__mc-subtitle {
   animation-name: slideFromBottom;
-  animation-delay: 0.2s;
+  animation-delay: 0.4s;
 }
 
 .app__mc-content_buttons {
   animation-name: slideFromBottom;
-  animation-delay: 0.3s;
+  animation-delay: 0.5s;
 }
 
 @keyframes slideFromBottom {
@@ -108,7 +108,9 @@
   }
 }
 
-
+.zeroOp {
+  opacity: 0;
+}
 
 /* ------------------------------------- */
 
