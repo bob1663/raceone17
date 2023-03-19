@@ -1,0 +1,54 @@
+.app__shopCard {
+  display: flex;
+  flex-direction: column;
+  max-width: 380px;
+  cursor: pointer;
+}
+
+.app__shopCard img {
+  height: auto;
+  width: 100%;
+  max-width: 380px;
+  border-radius: 6px;
+}
+
+.app__shopCard p {
+  font-family: var(--font-inter);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000000;
+}
+
+.app__shopCard-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.app__shopCard-price button {
+  all: unset;
+  cursor: pointer;
+  background: #029c00;
+  border-radius: 6px;
+  padding: 10px 14px;
+
+  font-family: var(--font-inter);
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  transition: 0.5s ease;
+}
+
+.app__shopCard-price button:hover {
+  transition: 0.5s ease;
+  background: #3dc73b;
+}
+
+@media (max-width: 540px) {
+    .app__shopCard {
+        justify-self: center;
+    }
+}

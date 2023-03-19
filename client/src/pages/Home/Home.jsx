@@ -51,12 +51,16 @@ const settings = {
                 display: "flex",
                 justifyContent: "center",
                 borderRadius: "50%",
-                width: "10px",
-                height: "10px",
-                background: "rgba(255, 255, 255, 0.3)",
+                width: "12px",
+                height: "12px",
+                
                 border: className.includes("slick-active")
                   ? "2px solid #FFFFFF"
                   : "none",  
+                background: className.includes("slick-active")
+                  ? "black"
+                  : "rgba(255, 255, 255, 0.3)",  
+
               }}
             />
           );
