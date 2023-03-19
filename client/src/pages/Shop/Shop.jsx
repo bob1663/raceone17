@@ -4,10 +4,14 @@ import { ShopCard } from "../../components";
 import { data } from "../../constants";
 
 const Shop = () => {
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(
+    Number(localStorage.getItem("currentPage")) || 1
+  );
   const itemsPerPage = 9;
   // ------------------------------------------------------
-  
+  useEffect(() => {
+    localStorage.setItem("currentPage", currentPage);
+  }, [currentPage]);
   // ------------------------------------------------------
 
   const handleClick = (event) => {

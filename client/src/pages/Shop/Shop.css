@@ -39,6 +39,9 @@
   color: #666666;
   padding: 3px 7px;
   border-radius: 50%;
+
+  width: 21px;
+  height: 21px;
 }
 
 .app__shop ul li:hover {
@@ -49,6 +52,7 @@
 .special-item {
   border-radius: 100px !important;
   color: #1e1e1e !important;
+  width: auto !important;
 }
 
 @media (max-width: 810px) {
