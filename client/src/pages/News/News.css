@@ -12,7 +12,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 30px 20px;
+  padding: 30px 15px;
+}
+
+.app__news-button {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .app__news button {
@@ -55,3 +64,4 @@
 .app__news button:hover {
   background: #efefef;
 }
+

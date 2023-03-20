@@ -5,13 +5,12 @@ import "./NewsPost.css";
 const NewsPost = ({
   data: { imgNews, titleNews, newsTopic, newsDate, newsDescription },
 }) => {
-
-// ------------------------------------------------------------------------
-const limitedDescription =
+  // ------------------------------------------------------------------------
+  const limitedDescription =
     newsDescription.split(" ").length > 30
       ? `${newsDescription.split(" ").slice(0, 30).join(" ")} [...]`
       : newsDescription;
-// ------------------------------------------------------------------------
+  // ------------------------------------------------------------------------
   return (
     <div className="app__newsPost">
       <div className="app__newsPost-image">
@@ -19,12 +18,18 @@ const limitedDescription =
       </div>
       <div className="app__newsPost-content">
         <div className="app__newsPost-content_info">
-          <p>By</p>
-          <p>RaceOne17</p>
-          <p>In</p>
-          <p>{newsTopic}</p>
-          <p>Posted</p>
-          <p>{newsDate}</p>
+          <div className="app__newsPost-content_info-wrapper">
+            <p>By</p>
+            <p>RaceOne17</p>
+          </div>
+          <div className="app__newsPost-content_info-wrapper">
+            <p>In</p>
+            <p>{newsTopic}</p>
+          </div>
+          <div className="app__newsPost-content_info-wrapper">
+            <p>Posted</p>
+            <p>{newsDate}</p>
+          </div>
         </div>
         <h1>{titleNews}</h1>
         <p className="special-font">{limitedDescription}</p>

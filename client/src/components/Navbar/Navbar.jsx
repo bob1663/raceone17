@@ -32,7 +32,11 @@ const Navbar = () => {
           <h1>one</h1>
           <h1>17</h1>
         </Link>
-        <div className={`app__navbar-links ${isShopPage || isNewsPage ? "alt" : ""}`}>
+        <div
+          className={`app__navbar-links ${
+            isShopPage || isNewsPage ? "alt" : ""
+          }`}
+        >
           <ul>
             <li>
               <Link
@@ -125,36 +129,82 @@ const Navbar = () => {
             onClick={() => setToggleMenu(false)}
           />
         ) : (
-          <FiMenu color="#000000" size={27} onClick={() => setToggleMenu(true)} />
+          <FiMenu
+            color="#000000"
+            size={27}
+            onClick={() => setToggleMenu(true)}
+          />
         )}
         {toggleMenu && (
           <div className="app__navbar-smallscreen_links">
             <ul>
               <li>
-                <Link to="/" className="app__navbar-smallscreen_links-item">
+                <Link
+                  to="/"
+                  className={`app__navbar-smallscreen_links-item ${
+                    activeLink === "/" ? "active" : ""
+                  }`}
+                  onClick={() => {
+                    setActiveLink("/");
+                    localStorage.setItem("activeLink", "/");
+                  }}
+                >
                   home
                 </Link>
               </li>
               <li>
-                <Link to="/shop" className="app__navbar-smallscreen_links-item">
+                <Link
+                  to="/shop"
+                  className={`app__navbar-smallscreen_links-item ${
+                    activeLink === "/shop" ? "active" : ""
+                  }`}
+                  onClick={() => {
+                    setActiveLink("/shop");
+                    localStorage.setItem("activeLink", "/shop");
+                  }}
+                >
                   shop
                 </Link>
               </li>
               <li>
-                <Link to="/news" className="app__navbar-smallscreen_links-item">
+                <Link
+                  to="/news"
+                  className={`app__navbar-smallscreen_links-item ${
+                    activeLink === "/news" ? "active" : ""
+                  }`}
+                  onClick={() => {
+                    setActiveLink("/news");
+                    localStorage.setItem("activeLink", "/news");
+                  }}
+                >
                   news
                 </Link>
               </li>
               <li>
                 <Link
                   to="/contact"
-                  className="app__navbar-smallscreen_links-item"
+                  className={`app__navbar-smallscreen_links-item ${
+                    activeLink === "/contact" ? "active" : ""
+                  }`}
+                  onClick={() => {
+                    setActiveLink("/contact");
+                    localStorage.setItem("activeLink", "/contact");
+                  }}
                 >
                   contact
                 </Link>
               </li>
               <li>
-                <Link to="/cars" className="app__navbar-smallscreen_links-item">
+                <Link
+                  to="/cars"
+                  className={`app__navbar-smallscreen_links-item ${
+                    activeLink === "/cars" ? "active" : ""
+                  }`}
+                  onClick={() => {
+                    setActiveLink("/cars");
+                    localStorage.setItem("activeLink", "/cars");
+                  }}
+                >
                   cars
                 </Link>
               </li>
