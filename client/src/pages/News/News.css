@@ -1,0 +1,57 @@
+.app__news {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 120px;
+}
+
+.app__news-posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+.app__news button {
+  all: unset;
+  background: #ffffff;
+  border: 2px solid #e2e2e2;
+  border-radius: 2px;
+
+  max-width: 540px;
+  width: 100%;
+
+  margin-top: 20px;
+  margin-bottom: 80px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 17px;
+  padding-bottom: 17px;
+
+  cursor: pointer;
+
+  gap: 12px;
+
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: #252525;
+}
+
+.app__news button:hover {
+  background: #efefef;
+}

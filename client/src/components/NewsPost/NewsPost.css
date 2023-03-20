@@ -1,0 +1,132 @@
+.app__newsPost {
+  display: flex;
+  flex-direction: column;
+  max-width: 1070px;
+  width: 100%;
+
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+
+  margin-bottom: 40px;
+}
+/* ---------------------- */
+.app__newsPost-image {
+  max-height: 421px;
+  max-width: 1070px;
+  cursor: pointer;
+
+  overflow: hidden;
+}
+
+.app__newsPost-image img {
+  height: 100%;
+  width: 100%;
+  transition: 0.15s ease-in-out;
+}
+
+.app__newsPost-image:hover img {
+  transform: scale(1.1);
+  filter: grayscale(100%);
+}
+/* ---------------------- */
+
+.app__newsPost-content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 25px;
+}
+
+.app__newsPost-content_info {
+  display: flex;
+  flex-direction: row;
+}
+
+.app__newsPost-content_info p {
+  font-family: var(--font-sans);
+  font-style: italic;
+
+  font-size: 12px;
+  line-height: 27px;
+
+  margin-right: 5px;
+}
+
+.app__newsPost-content_info p:nth-child(odd) {
+  color: #999999;
+  font-weight: 400;
+}
+
+.app__newsPost-content_info p:nth-child(once) {
+  color: #333333;
+  font-weight: 500;
+}
+
+.app__newsPost-content h1 {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #333333;
+  margin-top: 12px;
+}
+
+.special-font {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  color: #666666;
+  margin-top: 18px;
+
+  max-width: 950px;
+}
+
+.app__newsPost-content_info-bottomContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 55px;
+  align-items: center;
+}
+
+.app__newsPost-content_info-bottomContainer_shareContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #d9d9d9;
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 7px;
+  transition: 0.5s ease;
+}
+
+.app__newsPost-content_info-bottomContainer_shareContainer:hover {
+  transition: 0.5s ease;
+  background: #b5b5b5;
+}
+
+.app__newsPost-content_info-bottomContainer_shareContainer img {
+  width: 16px;
+  height: 16px;
+}
+
+.app__newsPost-content_info-bottomContainer p {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: #333333;
+  align-items: center;
+  display: flex;
+  gap: 6px;
+
+  cursor: pointer;
+}

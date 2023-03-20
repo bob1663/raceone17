@@ -29,6 +29,33 @@ import ShopCard22 from "../assets/ShopCard22.png";
 import ShopCard23 from "../assets/ShopCard23.png";
 import ShopCard24 from "../assets/ShopCard24.png";
 
+import NewsCard1 from "../assets/NewsCard1.png";
+import NewsCard2 from "../assets/NewsCard2.png";
+import NewsCard3 from "../assets/NewsCard3.png";
+import NewsCard4 from "../assets/NewsCard4.png";
+import NewsCard5 from "../assets/NewsCard5.png";
+import NewsCard6 from "../assets/NewsCard6.jpg";
+import NewsCard7 from "../assets/NewsCard7.jpg";
+import NewsCard8 from "../assets/NewsCard8.jpg";
+import NewsCard9 from "../assets/NewsCard9.jpg";
+import NewsCard10 from "../assets/NewsCard10.jpg";
+import NewsCard11 from "../assets/NewsCard11.jpg";
+import NewsCard12 from "../assets/NewsCard12.jpg";
+import NewsCard13 from "../assets/NewsCard13.jpg";
+import NewsCard14 from "../assets/NewsCard14.jpg";
+import NewsCard15 from "../assets/NewsCard15.jpg";
+import NewsCard16 from "../assets/NewsCard16.jpg";
+import NewsCard17 from "../assets/NewsCard17.png";
+import NewsCard18 from "../assets/NewsCard18.png";
+import NewsCard19 from "../assets/NewsCard19.jpg";
+import NewsCard20 from "../assets/NewsCard20.jpg";
+import NewsCard21 from "../assets/NewsCard21.jpg";
+
+import ShareIcon from "../assets/ShareIcon2.svg";
+import ReadMoreIcon from "../assets/ReadMoreIcon2.svg";
+
+import LoadMoreIcon from '../assets/LoadMoreIcon.svg';
+
 export default {
   MCBg1,
   MCBg2,
@@ -60,4 +87,31 @@ export default {
   ShopCard22,
   ShopCard23,
   ShopCard24,
+
+  NewsCard1,
+  NewsCard2,
+  NewsCard3,
+  NewsCard4,
+  NewsCard5,
+  NewsCard6,
+  NewsCard7,
+  NewsCard8,
+  NewsCard9,
+  NewsCard10,
+  NewsCard11,
+  NewsCard12,
+  NewsCard13,
+  NewsCard14,
+  NewsCard15,
+  NewsCard16,
+  NewsCard17,
+  NewsCard18,
+  NewsCard19,
+  NewsCard20,
+  NewsCard21,
+
+  ShareIcon,
+  ReadMoreIcon,
+
+  LoadMoreIcon,
 };
