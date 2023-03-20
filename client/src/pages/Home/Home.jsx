@@ -25,7 +25,7 @@ const settings = {
     <div
       style={{
         position: "absolute",
-        bottom: "100px",
+        bottom: "60px",
         textAlign: "center",
         width: "100%",
         alignItems: "center",
@@ -38,7 +38,7 @@ const settings = {
           alignItems: "center",
           display: "flex",
           justifyContent: "center",
-          gap: "16px",
+          gap: "10px",
         }}
       >
         {dots.map((dot, index) => {
