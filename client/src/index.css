@@ -17,3 +17,8 @@ a {
   color: unset;
   text-decoration: none;
 }
+
+::selection {
+  background-color: red;
+  color: white;
+}

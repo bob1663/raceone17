@@ -54,7 +54,13 @@ import NewsCard21 from "../assets/NewsCard21.jpg";
 import ShareIcon from "../assets/ShareIcon2.svg";
 import ReadMoreIcon from "../assets/ReadMoreIcon2.svg";
 
-import LoadMoreIcon from '../assets/LoadMoreIcon.svg';
+import LoadMoreIcon from "../assets/LoadMoreIcon.svg";
+
+import ContactBg from "../assets/ContactBg.png";
+import QuestionMarkIcon from "../assets/QuestionMarkIcon.svg";
+import DropDownIcon from "../assets/DropDownIcon.svg";
+import DownArrowIcon from "../assets/DownArrowIcon.svg";
+import UnderScoreIcon from "../assets/UnderScoreIcon.svg";
 
 export default {
   MCBg1,
@@ -114,4 +120,10 @@ export default {
   ReadMoreIcon,
 
   LoadMoreIcon,
+
+  ContactBg,
+  QuestionMarkIcon,
+  DropDownIcon,
+  DownArrowIcon,
+  UnderScoreIcon,
 };

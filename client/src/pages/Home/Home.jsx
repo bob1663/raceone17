@@ -53,14 +53,13 @@ const settings = {
                 borderRadius: "50%",
                 width: "12px",
                 height: "12px",
-                
+
                 border: className.includes("slick-active")
                   ? "2px solid #FFFFFF"
-                  : "none",  
+                  : "none",
                 background: className.includes("slick-active")
                   ? "black"
-                  : "rgba(255, 255, 255, 0.3)",  
-
+                  : "rgba(255, 255, 255, 0.3)",
               }}
             />
           );
@@ -71,7 +70,6 @@ const settings = {
 };
 
 const Home = () => {
- 
   const [isHomeHovered, setIsHomeHovered] = useState(false);
 
   const handleHomeMouseEnter = () => {
@@ -93,7 +91,19 @@ const Home = () => {
   };
 
   // -------------------------------------------
-    const [currentSlide,setCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  // -------------------------------------------
+
+  const getTitleByIndex = (index) => {
+    if (index < 0) {
+      return data.home[data.home.length - 1].title;
+    }
+    if (index >= data.home.length) {
+      return data.home[0].title;
+    }
+    return data.home[index].title;
+  };
+
   // -------------------------------------------
 
   return (
@@ -111,17 +121,28 @@ const Home = () => {
           onClick={handlePrevSlide}
         >
           <img src={PrevButton} alt="Previous" className="app__prev-button" />
+          <span>{getTitleByIndex(currentSlide - 1)}</span>
         </div>
         <div
           className="app__carousel-buttons-content"
           onClick={handleNextSlide}
         >
+          <span>{getTitleByIndex(currentSlide + 1)}</span>
           <img src={NextButton} alt="Next" className="app__next-button" />
         </div>
       </div>
-      <Slider ref={sliderRef} {...settings} afterChange={(currentSlide)=> setCurrentSlide(currentSlide)}>
+      <Slider
+        ref={sliderRef}
+        {...settings}
+        afterChange={(currentSlide) => setCurrentSlide(currentSlide)}
+      >
         {data.home.map((home, index) => (
-          <MainCarousel data={home} key={home.title} index={index} currentSlide={currentSlide}/>
+          <MainCarousel
+            data={home}
+            key={home.title}
+            index={index}
+            currentSlide={currentSlide}
+          />
         ))}
       </Slider>
     </div>

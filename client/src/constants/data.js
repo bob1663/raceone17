@@ -52,7 +52,7 @@ const shop = [
   {
     imgShop: images.ShopCard5,
     titleShop: "Formula 1 2013 V8",
-    priceShop: "£3.99",
+    priceShop: "£3M",
   },
   {
     imgShop: images.ShopCard6,
@@ -322,4 +322,64 @@ const news = [
   },
 ];
 
-export default { home, shop, news };
+const faq = [
+  {
+    question: "Q1: What types of sports cars and racing cars do you sell?",
+    answer:
+      "A: We sell a wide range of iconic sports cars and racing cars from top manufacturers such as Ferrari, Lamborghini, Porsche and more.",
+  },
+  {
+    question: "Q2: Can I test drive a car before purchasing?",
+    answer:
+      "A: Yes! We offer test drives for all our vehicles. Simply contact us to schedule an appointment.",
+  },
+  {
+    question: "Q3: Do you offer financing options for purchasing a car?",
+    answer:
+      "A: Yes! We work with several financial institutions to provide competitive financing options for our customers.",
+  },
+  {
+    question: "Q4: Do you accept trade-ins?",
+    answer:
+      "A: Yes! We accept trade-ins and offer competitive valuations for your current vehicle.",
+  },
+  {
+    question:
+      "Q5: Do you offer maintenance and repair services for the cars you sell?",
+    answer:
+      "A: Yes! We have a team of highly skilled technicians who specialize in maintaining and repairing the cars we sell.",
+  },
+  {
+    question: "Q6: Do you offer customization options for the cars you sell?",
+    answer:
+      "A: Yes! We offer a wide range of customization options to make your car truly unique. Contact us to learn more.",
+  },
+  {
+    question: "Q7: Do you offer warranty for the cars you sell?",
+    answer:
+      "A: Yes! All our cars come with a manufacturer's warranty. Contact us to learn more about the specific warranty terms for each car.",
+  },
+  {
+    question: "Q8: Can I purchase a car online?",
+    answer:
+      "A: Yes! You can browse our inventory and complete your purchase online. We also offer home delivery for your convenience.",
+  },
+  {
+    question: "Q9: Do you offer international shipping for the cars you sell?",
+    answer:
+      "A: Yes! We offer international shipping for all our cars. Contact us to learn more about the shipping options and costs.",
+  },
+  {
+    question: "Q10: Do you have a return policy for the cars you sell?",
+    answer:
+      "A: Yes! We have a return policy in place to ensure customer satisfaction. Contact us to learn more about the specific terms and conditions of our return policy.",
+  },
+  {
+    question:
+      "Q11: Do you offer any special deals or promotions for purchasing a car?",
+    answer:
+      "A: Yes! We frequently offer special deals and promotions for purchasing a car. Check our website or contact us to learn more about our current offers.",
+  },
+];
+
+export default { home, shop, news, faq };

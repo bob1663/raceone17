@@ -1,0 +1,300 @@
+.app__contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.app__contact-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../../assets/ContactBg.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-attachment: fixed;
+  height: 100vh;
+  padding-top: 400px;
+  padding-bottom: 25px;
+}
+
+.app__contact-image_container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+}
+
+.app__contact-image_container h1 {
+  font-family: verdana, geneva, sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 80px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.app__contact-image_container h3 {
+  font-family: verdana, geneva, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 39px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 30px;
+}
+
+.app__contact-image_downArrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0.9;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  padding: 17px;
+  transition: 0.5s ease;
+}
+
+.app__contact-image_downArrow img {
+  width: 16px;
+  height: 16px;
+}
+
+.app__contact-image_downArrow:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transition: 0.5s ease;
+}
+
+/* FAQ */
+
+.app__contact-faq {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.app__contact-faq h1 {
+  font-family: verdana, geneva, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 42px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #222222;
+  margin-top: 120px;
+}
+
+.app__contact-faq img {
+  width: 25px;
+  height: 4px;
+  justify-self: center;
+  align-self: center;
+  margin-top: 70px;
+}
+
+.app__contact-faq_list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  max-width: 1070px;
+  width: 100%;
+}
+
+.app__contact-faq_list-item {
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: #ffffff;
+  border-width: 1px 1px 0px 1px;
+  border-style: solid;
+  border-color: #ececec;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.app__contact-faq_list-item:last-child {
+  border-width: 1px 1px 1px 1px;
+}
+
+.app__contact-faq_list-item:hover {
+  background: #f3f3f3;
+  transition: 0.3s ease;
+}
+
+.app__contact-faq_list-item:hover img {
+  filter: brightness(50%);
+  transition: filter 0.3s;
+}
+
+.app__contact-faq_list-item img {
+  margin: 0;
+}
+
+.app__contact-faq_list-item_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+.app__contact-faq_list-item_left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 20px;
+}
+
+.app__contact-faq_list-item_left p {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 22px;
+  color: #222222;
+}
+
+.app__contact-faq_list-item_left img {
+  margin: 0;
+}
+
+.app__contact-faq_answer {
+  padding: 20px;
+  background: #ffffff;
+}
+
+.app__contact-faq_answer p {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  color: #666666;
+}
+
+/* FORM */
+.app__contact-form {
+  display: flex;
+  background: #ffffff;
+ 
+}
+
+.app__contact-form form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app__contact-form_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 573px;
+  align-items: flex-start;
+  padding: 0 15px;
+}
+
+.app__contact-form form p {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  color: #666666;
+}
+
+.app__contact-form form input[type="text"],
+.app__contact-form form input[type="email"] {
+  all: unset;
+  background: #fdfdfd;
+  border: 1px solid #e3e3e3;
+  padding: 10px 12px;
+
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 13px;
+  color: #666666;
+
+  margin-bottom: 13px;
+  max-width: 354px;
+  width: 100%;
+}
+
+.app__contact-form form textarea {
+  all: unset;
+  background: #fdfdfd;
+  border: 1px solid #e3e3e3;
+  height: 192px;
+
+  padding: 10px 12px;
+
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 13px;
+  color: #666666;
+
+  max-width: 547px;
+  width: 100%;
+}
+
+.app__contact-form form button {
+  all: unset;
+  background: #252525;
+
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 13px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 13px 16px;
+  color: #ffffff;
+  margin-top: 15px;
+  margin-bottom: 100px;
+  cursor: pointer;
+  max-width: 70px;
+  transition: 0.5s ease;
+}
+
+.app__contact-form form button:hover {
+  transition: 0.5s ease;
+  background: #6d6d6d;
+}
+
+@media screen and (max-width: 768px) {
+  .app__contact-image {
+    padding-top: 300px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .app__contact-image {
+    padding-top: 260px;
+  }
+  .app__contact-image_container h1 {
+    font-size: 40px;
+    line-height: 70px;
+  }
+
+  .app__contact-image_container h3 {
+    font-size: 22px;
+    line-height: 37px;
+  }
+}

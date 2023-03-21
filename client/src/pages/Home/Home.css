@@ -1,4 +1,4 @@
- .app__home {
+.app__home {
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -17,16 +17,19 @@
 
 .app__prev-button {
   left: 0;
+  position: fixed;
+  margin-left: 45px;
 }
 
 .app__next-button {
   right: 0;
+  position: fixed;
+  margin-right: 45px;
 }
 
 .app__carousel-buttons-content {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   border: 2px solid #ffffff;
   border-radius: 100px;
   padding: 23px 26px;
@@ -34,16 +37,60 @@
   gap: 17px;
   transition: transform 0.5s ease;
   transition: 0.5s ease;
+  /* ---------------------------------------- */
+  width: 62px;
+  height: 62px;
+  overflow: hidden;
+
+  transition: width 0.5s ease 0.5s;
+}
+
+.app__carousel-buttons-content {
+  flex-direction: row-reverse;
+}
+
+.app__carousel-buttons-content:nth-child(2) {
+  flex-direction: row;
 }
 
 .app__carousel-buttons-content:hover {
-  transform: rotate(360deg);
-  background: rgba(255, 255, 255, 0.3);
-  transition: 0.5s ease;
+  width: 200px;
 }
-/* DOTS */
+/* ---------------------------------------- */
 
-/* ---- */
+.app__carousel-buttons-content span {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  max-width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #ffffff;
+}
+
+.app__carousel-buttons-content:hover span {
+  opacity: 1;
+}
+
+.app__carousel-buttons-content:hover span {
+  transition: opacity 0.3s ease 0.3s;
+}
+
+.app__carousel-buttons-content {
+  transition: width 0.2s ease 0.2s;
+}
+
+.app__carousel-buttons-content:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transition: width 0.2s ease, background 0.5s ease;
+}
+
 
 @media screen and (max-width: 768px) {
   .app__carousel-buttons {

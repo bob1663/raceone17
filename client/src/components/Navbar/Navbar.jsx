@@ -17,6 +17,11 @@ const Navbar = () => {
   const isShopPage = location.pathname === "/shop";
   const isNewsPage = location.pathname === "/news";
   // ------------------------------------------------------
+  useEffect(() => {
+    setActiveLink(location.pathname);
+    localStorage.setItem("activeLink", location.pathname);
+  }, [location.pathname]);
+  // ------------------------------------------------------
   return (
     <nav className={`app__navbar ${isShopPage || isNewsPage ? "alt" : ""}`}>
       <div className="app__navbar-container">
