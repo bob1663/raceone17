@@ -18,13 +18,13 @@
 .app__prev-button {
   left: 0;
   position: fixed;
-  margin-left: 45px;
+  margin-left: 46px;
 }
 
 .app__next-button {
   right: 0;
   position: fixed;
-  margin-right: 45px;
+  margin-right: 46px;
 }
 
 .app__carousel-buttons-content {
