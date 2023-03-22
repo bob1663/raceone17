@@ -16,17 +16,20 @@ const Shop = () => {
 
   const handleClick = (event) => {
     setCurrentPage(Number(event.target.id));
+    window.scrollTo(0, 0);
   };
 
   const handlePrevClick = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
+      window.scrollTo(0, 0);
     }
   };
 
   const handleNextClick = () => {
     if (currentPage < Math.ceil(data.shop.length / itemsPerPage)) {
       setCurrentPage(currentPage + 1);
+      window.scrollTo(0, 0);
     }
   };
 

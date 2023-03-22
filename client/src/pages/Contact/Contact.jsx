@@ -4,6 +4,41 @@ import { data, images } from "../../constants";
 
 const Contact = () => {
   const [openFaq, setOpenFaq] = useState(null);
+  // -----------------------------------------------
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [nameError, setNameError] = useState(false);
+  const [emailError, setEmailError] = useState(false);
+
+  const validateEmail = (email) => {
+    // Regular expression to check if email is valid
+    const re =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Check if name field is empty
+    if (name.trim() === "") {
+      setNameError(true);
+    } else {
+      setNameError(false);
+    }
+    // Check if email is valid
+    if (!validateEmail(email)) {
+      setEmailError(true);
+    } else {
+      setEmailError(false);
+    }
+  };
+  // -----------------------------------------------
+  const handleScroll = () => {
+    document
+      .querySelector(".app__contact-faq")
+      .scrollIntoView({ behavior: "smooth" });
+  };
+  // -----------------------------------------------
   return (
     <div className="app__contact">
       <div className="app__contact-image">
@@ -12,7 +47,7 @@ const Contact = () => {
           <h3>Help us by seeing if your question is already answered below.</h3>
         </div>
         <div className="app__contact-image_container">
-          <div className="app__contact-image_downArrow">
+          <div className="app__contact-image_downArrow" onClick={handleScroll}>
             <img src={images.DownArrowIcon} alt="DownArrowIcon" />
           </div>
         </div>
@@ -62,18 +97,26 @@ const Contact = () => {
         />
       </div>
       <div className="app__contact-form">
-        <form action="">
-          <div className="app__contact-form_container">
-            <p>Your Name (required)</p>
-            <input type="text" />
-            <p>Your Email (required)</p>
-            <input type="email" />
-            <p>Subject</p>
-            <input type="text" />
-            <p>Your Message</p>
-            <textarea cols="1" rows="1"></textarea>
-            <button type="submit">SEND</button>
-          </div>
+        <form onSubmit={handleSubmit}>
+          <p>Your Name (required)</p>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          {nameError && <small>The field is required.</small>}
+          <p>Your Email (required)</p>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          {emailError && <small>The e-mail address entered is invalid.</small>}
+          <p>Subject</p>
+          <input type="text" />
+          <p>Your Message</p>
+          <textarea cols="1" rows="1"></textarea>
+          <button type="submit">SEND</button>
         </form>
       </div>
     </div>
