@@ -42,11 +42,17 @@ const Contact = () => {
   return (
     <div className="app__contact">
       <div className="app__contact-image">
-        <div className="app__contact-image_container">
+        <div
+          className="app__contact-image_container"
+          style={{ height: "100vh", justifyContent: "flex-end" }}
+        >
           <h1>Contact Race One 17 here!</h1>
           <h3>Help us by seeing if your question is already answered below.</h3>
         </div>
-        <div className="app__contact-image_container">
+        <div
+          className="app__contact-image_container"
+          style={{ height: "50vh", justifyContent: "flex-end" }}
+        >
           <div className="app__contact-image_downArrow" onClick={handleScroll}>
             <img src={images.DownArrowIcon} alt="DownArrowIcon" />
           </div>

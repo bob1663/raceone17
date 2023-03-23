@@ -8,12 +8,11 @@
     url("../../assets/ContactBg.png");
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background-attachment: fixed;
-  height: 100vh;
-  padding-top: 400px;
-  padding-bottom: 25px;
+  max-height: 100vh;
+  height: 100%;
 }
 
 .app__contact-image_container {
@@ -53,6 +52,7 @@
   border-radius: 50%;
   padding: 17px;
   transition: 0.5s ease;
+  margin-bottom: 25px;
 }
 
 .app__contact-image_downArrow img {
@@ -280,16 +280,16 @@
   transition: 0.5s ease;
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .app__contact-image {
     padding-top: 300px;
   }
-}
+} */
 
 @media screen and (max-width: 460px) {
-  .app__contact-image {
+  /* .app__contact-image {
     padding-top: 260px;
-  }
+  } */
   .app__contact-image_container h1 {
     font-size: 40px;
     line-height: 70px;
