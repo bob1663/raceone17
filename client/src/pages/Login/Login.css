@@ -1,0 +1,134 @@
+.app__login {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-image: url("../../assets/AuthBg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.app__login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  box-shadow: 2px 9px 49px -17px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 40px 35px;
+
+  max-width: 400px;
+  width: 100%;
+}
+
+.app__login-container_img {
+  width: 30.2px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+
+.app__login-container h1 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 37px;
+  text-align: center;
+  color: #331919;
+}
+
+.app__login-container_p {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 23px;
+  text-align: center;
+  color: #876666;
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+.app__login-container form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.app__login-container form p {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 23px;
+  color: #876666;
+  opacity: 0.7;
+}
+
+.app__login-container form input[type="text"],
+.app__login-container form input[type="password"] {
+  all: unset;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 330px;
+
+  padding: 5px 0px;
+
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #2e2e2e;
+
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.app__login-container form input[type="text"]:focus,
+.app__login-container form input[type="password"]:focus {
+  border-bottom: 1px solid #e41929;
+}
+
+.app__login-container_smallp {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  color: #876666;
+  opacity: 0.7;
+  cursor: pointer;
+  user-select: none;
+}
+
+.app__login-container_smallp:hover {
+  opacity: 1;
+}
+
+.app__login-container form button {
+  all: unset;
+
+  background: #e41929;
+  border-radius: 6px;
+
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px 0;
+  color: #ffffff;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: 0.2s ease;
+}
+
+.app__login-container form button:hover {
+  transition: 0.2s ease;
+  background: #740d16;
+}

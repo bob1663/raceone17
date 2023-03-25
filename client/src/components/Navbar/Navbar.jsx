@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 import { RiCloseLine } from "react-icons/ri";
 import { FiMenu } from "react-icons/fi";
+import { images } from "../../constants";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -21,6 +22,8 @@ const Navbar = () => {
     setActiveLink(location.pathname);
     localStorage.setItem("activeLink", location.pathname);
   }, [location.pathname]);
+  // ------------------------------------------------------
+
   // ------------------------------------------------------
   return (
     <nav className={`app__navbar ${isShopPage || isNewsPage ? "alt" : ""}`}>
@@ -42,7 +45,7 @@ const Navbar = () => {
             isShopPage || isNewsPage ? "alt" : ""
           }`}
         >
-          <ul>
+          <ul className="app__navbar-links_list">
             <li>
               <Link
                 to="/"
@@ -109,18 +112,25 @@ const Navbar = () => {
                   setActiveLink("/cars");
                   localStorage.setItem("activeLink", "/cars");
                 }}
+                style={{ cursor: "pointer" }}
               >
                 cars
               </Link>
             </li>
             <li>
-              <a
-                href="https://www.instagram.com/the_jfdl/"
-                target="_blank"
-                className="app__navbar-links_item"
+              <Link
+                to="/login"
+                className={`app__navbar-links_item ${
+                  activeLink === "/login" ? "active" : ""
+                }`}
+                onClick={() => {
+                  setActiveLink("/login");
+                  localStorage.setItem("activeLink", "/login");
+                }}
+                style={{ cursor: "pointer" }}
               >
-                by jfdl
-              </a>
+                log in
+              </Link>
             </li>
           </ul>
         </div>
@@ -214,13 +224,18 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <a
-                  href="https://www.instagram.com/the_jfdl/"
-                  target="_blank"
-                  className="app__navbar-smallscreen_links-item"
+                <Link
+                  to="/login"
+                  className={`app__navbar-smallscreen_links-item ${
+                    activeLink === "/login" ? "active" : ""
+                  }`}
+                  onClick={() => {
+                    setActiveLink("/login");
+                    localStorage.setItem("activeLink", "/login");
+                  }}
                 >
-                  by jfdl
-                </a>
+                  log in
+                </Link>
               </li>
             </ul>
           </div>

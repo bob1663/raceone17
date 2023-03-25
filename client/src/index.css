@@ -19,6 +19,6 @@ a {
 }
 
 ::selection {
-  background-color: red;
+  background-color: #E41929;
   color: white;
 }

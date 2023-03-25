@@ -62,7 +62,54 @@ import DropDownIcon from "../assets/DropDownIcon.svg";
 import DownArrowIcon from "../assets/DownArrowIcon.svg";
 import UnderScoreIcon from "../assets/UnderScoreIcon.svg";
 
+import AuthBg from "../assets/AuthBg.png";
+
+import f12017 from "../assets/formula/f12017.jpg";
+import f12018 from "../assets/formula/f12018.jpg";
+import f12019 from "../assets/formula/screenshot_rss_formula_hybrid_2019_ks_barcelona_18-2-120-14-6-58.jpg";
+import f12020 from "../assets/formula/rss-hybrid_2020-2.jpg";
+import f12021 from "../assets/formula/fh21_1-scaled.jpg";
+import f12022 from "../assets/formula/fh22_website.jpg";
+import f12022x from "../assets/formula/formulax.jpeg";
+
+import bmwm6gt3 from "../assets/gt/bmwm6gt3.jpg";
+import ferrari360gt3 from "../assets/gt/fer36.jpg";
+import ferrari575gt3 from "../assets/gt/fer57_main.jpg";
+import ferrari550gt3 from "../assets/gt/ferruccio55_previw.jpg";
+import huracangt3 from "../assets/gt/huracangt3.jpg";
+import murcielago from "../assets/gt/lanzo_main.jpg";
+import porsche911gt3 from "../assets/gt/porsche911.jpg";
+import saleen from "../assets/gt/shadow_main.jpg";
+import tornado from "../assets/gt/tornado_preview2.jpg";
+import vipergt3 from "../assets/gt/vortex_preview.jpg";
+
+import eye from "../assets/eye.svg";
+import user from "../assets/user.svg";
+import loginIco from "../assets/loginIco.svg";
+
 export default {
+  eye,
+  user,
+  loginIco,
+
+  f12017,
+  f12018,
+  f12019,
+  f12020,
+  f12021,
+  f12022,
+  f12022x,
+  bmwm6gt3,
+  ferrari360gt3,
+  ferrari575gt3,
+  ferrari550gt3,
+  huracangt3,
+  murcielago,
+  porsche911gt3,
+  saleen,
+  tornado,
+  vipergt3,
+
   MCBg1,
   MCBg2,
   MCBg3,
@@ -126,4 +173,6 @@ export default {
   DropDownIcon,
   DownArrowIcon,
   UnderScoreIcon,
+
+  AuthBg,
 };
