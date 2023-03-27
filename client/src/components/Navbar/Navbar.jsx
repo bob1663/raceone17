@@ -17,6 +17,7 @@ const Navbar = () => {
   const location = useLocation();
   const isShopPage = location.pathname === "/shop";
   const isNewsPage = location.pathname === "/news";
+  const isPostPage = location.pathname === "/post";
   // ------------------------------------------------------
   useEffect(() => {
     setActiveLink(location.pathname);
@@ -26,7 +27,11 @@ const Navbar = () => {
 
   // ------------------------------------------------------
   return (
-    <nav className={`app__navbar ${isShopPage || isNewsPage ? "alt" : ""}`}>
+    <nav
+      className={`app__navbar ${
+        isPostPage || isShopPage || isNewsPage ? "alt" : ""
+      }`}
+    >
       <div className="app__navbar-container">
         <Link
           to="/"
@@ -42,7 +47,7 @@ const Navbar = () => {
         </Link>
         <div
           className={`app__navbar-links ${
-            isShopPage || isNewsPage ? "alt" : ""
+            isPostPage || isShopPage || isNewsPage ? "alt" : ""
           }`}
         >
           <ul className="app__navbar-links_list">

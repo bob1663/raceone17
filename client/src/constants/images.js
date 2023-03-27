@@ -83,12 +83,12 @@ import saleen from "../assets/gt/shadow_main.jpg";
 import tornado from "../assets/gt/tornado_preview2.jpg";
 import vipergt3 from "../assets/gt/vortex_preview.jpg";
 
-import eye from "../assets/eye.svg";
+import lock from "../assets/lock.svg";
 import user from "../assets/user.svg";
 import loginIco from "../assets/loginIco.svg";
 
 export default {
-  eye,
+  lock,
   user,
   loginIco,
 

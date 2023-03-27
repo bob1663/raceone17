@@ -30,7 +30,7 @@ const Login = () => {
           <p>Password</p>
           <input
             type={showPassword ? "text" : "password"}
-            style={{ backgroundImage: `url(${images.eye})` }}
+            style={{ backgroundImage: `url(${images.lock})` }}
           />
           <h6
             className="app__login-container_smallp"
