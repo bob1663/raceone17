@@ -16,6 +16,7 @@ const Post = () => {
     }
   }, [modalIsOpen]);
   // -----------------------------------------------------------
+  const [currentImage, setCurrentImage] = useState(null);
   // -----------------------------------------------------------
   return (
     <div className="app__post">
@@ -30,7 +31,10 @@ const Post = () => {
             src={images.bmwm6gt3}
             alt="PostImage"
             className="app__post-container_img"
-            onClick={() => setModalIsOpen(true)}
+            onClick={() => {
+              setCurrentImage(images.bmwm6gt3);
+              setModalIsOpen(true);
+            }}
           />
           <Modal
             isOpen={modalIsOpen}
@@ -55,9 +59,10 @@ const Post = () => {
             }}
           >
             <img
-              src={images.bmwm6gt3}
+              src={currentImage}
               alt="PostImage"
               className={`modal-image ${modalIsOpen ? "fade-in" : "fade-out"}`}
+              style={{ height: "80vh" }}
             />
           </Modal>
           <h1>BMW M6 GT3 Released!</h1>
@@ -82,44 +87,58 @@ const Post = () => {
           <h3>CAR GALLERY</h3>
           <div className="app__post-container_gallery">
             <img
-              src={images.bmwm6gt3}
+              src={images.ferrari360gt3}
               alt="GalleryImage"
               className="app__post-container_gallery-image"
+              onClick={() => {
+                setCurrentImage(images.ferrari360gt3);
+                setModalIsOpen(true);
+              }}
             />
             <img
-              src={images.bmwm6gt3}
+              src={images.ferrari550gt3}
               alt="GalleryImage"
               className="app__post-container_gallery-image"
+              onClick={() => {
+                setCurrentImage(images.ferrari550gt3);
+                setModalIsOpen(true);
+              }}
             />
             <img
-              src={images.bmwm6gt3}
+              src={images.ferrari575gt3}
               alt="GalleryImage"
               className="app__post-container_gallery-image"
+              onClick={() => {
+                setCurrentImage(images.ferrari575gt3);
+                setModalIsOpen(true);
+              }}
             />
             <img
-              src={images.bmwm6gt3}
+              src={images.porsche911gt3}
               alt="GalleryImage"
               className="app__post-container_gallery-image"
+              onClick={() => {
+                setCurrentImage(images.porsche911gt3);
+                setModalIsOpen(true);
+              }}
             />
             <img
-              src={images.bmwm6gt3}
+              src={images.saleen}
               alt="GalleryImage"
               className="app__post-container_gallery-image"
+              onClick={() => {
+                setCurrentImage(images.saleen);
+                setModalIsOpen(true);
+              }}
             />
             <img
-              src={images.bmwm6gt3}
+              src={images.vipergt3}
               alt="GalleryImage"
               className="app__post-container_gallery-image"
-            />
-            <img
-              src={images.bmwm6gt3}
-              alt="GalleryImage"
-              className="app__post-container_gallery-image"
-            />
-            <img
-              src={images.bmwm6gt3}
-              alt="GalleryImage"
-              className="app__post-container_gallery-image"
+              onClick={() => {
+                setCurrentImage(images.vipergt3);
+                setModalIsOpen(true);
+              }}
             />
           </div>
         </div>
