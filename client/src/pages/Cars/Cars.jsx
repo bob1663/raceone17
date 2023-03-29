@@ -1,11 +1,56 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./Cars.css";
 
 import { images, data } from "../../constants";
 
 const Cars = () => {
-  // -------------------------------------------------------------------------
-  const gtCarElements = data.gtCars.map((gtCar) => {
+  const [gtSortCriteria, setGtSortCriteria] = useState(null);
+  const [gtSortDirection, setGtSortDirection] = useState("asc");
+  const [openWheelSortCriteria, setOpenWheelSortCriteria] = useState(null);
+  const [openWheelSortDirection, setOpenWheelSortDirection] = useState("asc");
+
+  const handleGtSortClick = (criteria) => {
+    if (gtSortCriteria === criteria) {
+      setGtSortDirection(gtSortDirection === "asc" ? "desc" : "asc");
+    } else {
+      setGtSortCriteria(criteria);
+      setGtSortDirection("asc");
+    }
+  };
+
+  const handleOpenWheelSortClick = (criteria) => {
+    if (openWheelSortCriteria === criteria) {
+      setOpenWheelSortDirection(
+        openWheelSortDirection === "asc" ? "desc" : "asc"
+      );
+    } else {
+      setOpenWheelSortCriteria(criteria);
+      setOpenWheelSortDirection("asc");
+    }
+  };
+
+  const sortCars = (cars, sortCriteria, sortDirection) => {
+    return [...cars].sort((a, b) => {
+      if (sortCriteria === "name") {
+        return sortDirection === "asc"
+          ? a.name.localeCompare(b.name)
+          : b.name.localeCompare(a.name);
+      } else if (sortCriteria === "power") {
+        return sortDirection === "asc"
+          ? Number(a.power) - Number(b.power)
+          : Number(b.power) - Number(a.power);
+      } else if (sortCriteria === "weight") {
+        return sortDirection === "asc"
+          ? Number(a.weight) - Number(b.weight)
+          : Number(b.weight) - Number(a.weight);
+      } else {
+        return 0;
+      }
+    });
+  };
+
+  const sortedGtCars = sortCars(data.gtCars, gtSortCriteria, gtSortDirection);
+  const gtCarElements = sortedGtCars.map((gtCar) => {
     return (
       <div className="app__cars-bottomDiv_content-item" key={gtCar.id}>
         <p>In stock</p>
@@ -17,7 +62,12 @@ const Cars = () => {
     );
   });
 
-  const f1CarElements = data.openWheel.map((openW) => {
+  const sortedOpenWheelCars = sortCars(
+    data.openWheel,
+    openWheelSortCriteria,
+    openWheelSortDirection
+  );
+  const f1CarElements = sortedOpenWheelCars.map((openW) => {
     return (
       <div className="app__cars-bottomDiv_content-item" key={openW.id}>
         <p>In stock</p>
@@ -29,14 +79,13 @@ const Cars = () => {
     );
   });
   // -------------------------------------------------------------------------
-  const openWheelRef = useRef(null); // add a ref for the open-wheel h1 element
-  const gtRef = useRef(null); // add a ref for the gt h1 element
-  // add a function to handle scrolling to the open-wheel h1 element
+  const openWheelRef = useRef(null);
+  const gtRef = useRef(null);
+
   const handleOpenWheelClick = () => {
     openWheelRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
-  // add a function to handle scrolling to the gt h1 element
   const handleGtClick = () => {
     gtRef.current.scrollIntoView({ behavior: "smooth" });
   };
@@ -63,13 +112,13 @@ const Cars = () => {
             <h3>
               Status <img src={images.CarsIconArrow} alt="CarsIconArrow" />
             </h3>
-            <h3>
+            <h3 onClick={() => handleOpenWheelSortClick("name")}>
               Name <img src={images.CarsIconArrow} alt="CarsIconArrow" />
             </h3>
-            <h3>
+            <h3 onClick={() => handleOpenWheelSortClick("power")}>
               Power <img src={images.CarsIconArrow} alt="CarsIconArrow" />
             </h3>
-            <h3>
+            <h3 onClick={() => handleOpenWheelSortClick("weight")}>
               Weight <img src={images.CarsIconArrow} alt="CarsIconArrow" />
             </h3>
             <h3>
@@ -89,13 +138,13 @@ const Cars = () => {
             <h3>
               Status <img src={images.CarsIconArrow} alt="CarsIconArrow" />
             </h3>
-            <h3>
+            <h3 onClick={() => handleGtSortClick("name")}>
               Name <img src={images.CarsIconArrow} alt="CarsIconArrow" />
             </h3>
-            <h3>
+            <h3 onClick={() => handleGtSortClick("power")}>
               Power <img src={images.CarsIconArrow} alt="CarsIconArrow" />
             </h3>
-            <h3>
+            <h3 onClick={() => handleGtSortClick("weight")}>
               Weight <img src={images.CarsIconArrow} alt="CarsIconArrow" />
             </h3>
             <h3>

@@ -123,6 +123,11 @@
   color: #000000;
   gap: 2px;
   cursor: pointer;
+  user-select: none;
+}
+
+.app__cars-bottomDiv_content-categories h3 img{
+  transform: rotate(180deg);
 }
 
 .app__cars-bottomDiv_content-item {
