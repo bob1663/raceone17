@@ -1,0 +1,208 @@
+.app__cars {
+  display: flex;
+  flex-direction: column;
+}
+
+.app__cars_topDiv {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+.app__cars_topDiv-openWheel,
+.app__cars_topDiv-GT {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px;
+
+  transition: width 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.app__cars_topDiv-openWheel {
+  background:
+    /* top, transparent black, faked with gradient */ linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    /* bottom, image */
+      url("../../assets/formula/screenshot_rss_formula_hybrid_2019_ks_barcelona_18-2-120-14-6-58.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.app__cars_topDiv-GT {
+  background:
+    /* top, transparent black, faked with gradient */ linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    /* bottom, image */ url("../../assets/gt/bmwm6gt3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.app__cars_topDiv-openWheel h1,
+.app__cars_topDiv-GT h1 {
+  font-family: "Verdana";
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 72px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  user-select: none;
+}
+
+.app__cars_topDiv-openWheel:hover {
+  width: 150%;
+}
+
+.app__cars_topDiv-GT:hover {
+  width: 150%;
+}
+
+.app__cars-bottomDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f7f7f7;
+}
+
+.app__cars-bottomDiv_content {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  max-width: 1140px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.app__cars-bottomDiv_content h1 {
+  font-family: "Verdana";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 42px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #222222;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.app__cars-bottomDiv_content span {
+  height: 1px;
+  background: #d9d9d9;
+  width: 100%;
+
+  margin-bottom: 20px;
+}
+
+.app__cars-bottomDiv_content-categories {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+  padding: 0 25px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.app__cars-bottomDiv_content-categories h3 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px;
+  color: #000000;
+  gap: 2px;
+  cursor: pointer;
+}
+
+.app__cars-bottomDiv_content-item {
+  margin-bottom: 10px;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+  width: 100%;
+  align-items: center;
+  padding: 0 25px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  cursor: pointer;
+}
+
+.app__cars-bottomDiv_content-item p {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  color: #029c00;
+}
+
+.app__cars-bottomDiv_content-item h3 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+@media screen and (max-width: 1140px) {
+  .app__cars-bottomDiv_content {
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .app__cars_topDiv {
+    margin-top: 100px;
+    flex-direction: column;
+  }
+  .app__cars_topDiv-openWheel,
+  .app__cars_topDiv-GT {
+    width: 100%;
+    height: 100%;
+    transition: none;
+  }
+  .app__cars_topDiv-openWheel:hover {
+    width: 100%;
+  }
+
+  .app__cars_topDiv-GT:hover {
+    width: 100%;
+  }
+
+  .app__cars_topDiv-openWheel h1,
+  .app__cars_topDiv-GT h1 {
+    font-size: 30px;
+    line-height: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .app__cars-bottomDiv_content-categories,
+  .app__cars-bottomDiv_content-item {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto auto;
+    grid-row-gap: 10px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .app__cars-bottomDiv_content-categories,
+  .app__cars-bottomDiv_content-item {
+    grid-template-columns: 2fr;
+    grid-template-rows: auto;
+  }
+}
