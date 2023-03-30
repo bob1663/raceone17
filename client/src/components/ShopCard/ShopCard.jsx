@@ -10,7 +10,7 @@ const ShopCard = ({
         <p style={{marginTop:'15px'}}>{titleShop}</p>
         <div className="app__shopCard-price">
             <p style={{fontWeight:"500"}}>{priceShop}</p>
-            <button>Add to cart</button>
+            <button>Purchase</button>
         </div>
     </div>
   )

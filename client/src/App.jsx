@@ -8,7 +8,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import { Navbar, Footer } from "./components";
-import { Cars, Contact, Home, Login, News, Post, Shop } from "./pages";
+import { CarPage, Cars, Contact, Home, Login, News, Post, Shop } from "./pages";
 
 const Layout = () => {
   const location = useLocation();
@@ -26,6 +26,7 @@ const Layout = () => {
           <Route path="/cars" exact element={<Cars />} />
           <Route path="/login" exact element={<Login />} />
           <Route path="/post" exact element={<Post />} />
+          <Route path="/cars/car/:id" exact element={<CarPage />} />
         </Routes>
       </div>
       {!isLoginPage && <Footer className="foooter" />}

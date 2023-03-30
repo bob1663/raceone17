@@ -54,9 +54,9 @@ const Cars = () => {
     return (
       <div className="app__cars-bottomDiv_content-item" key={gtCar.id}>
         <p>In stock</p>
-        <h3>{gtCar.name}</h3>
-        <h3>{gtCar.power}</h3>
-        <h3>{gtCar.weight}</h3>
+        <h3>{gtCar.name} </h3>
+        <h3>{gtCar.power} hp</h3>
+        <h3>{gtCar.weight} kg</h3>
         <h3>March 25, 2023</h3>
       </div>
     );
@@ -72,8 +72,8 @@ const Cars = () => {
       <div className="app__cars-bottomDiv_content-item" key={openW.id}>
         <p>In stock</p>
         <h3>{openW.name}</h3>
-        <h3>{openW.power}</h3>
-        <h3>{openW.weight}</h3>
+        <h3>{openW.power} hp</h3>
+        <h3>{openW.weight} kg</h3>
         <h3>March 25, 2023</h3>
       </div>
     );
@@ -90,6 +90,12 @@ const Cars = () => {
     gtRef.current.scrollIntoView({ behavior: "smooth" });
   };
   // -------------------------------------------------------------------------
+  const [rotate1, setRotate1] = useState(false);
+  const [rotate2, setRotate2] = useState(false);
+  const [rotate3, setRotate3] = useState(false);
+  const [rotate4, setRotate4] = useState(false);
+  const [rotate5, setRotate5] = useState(false);
+  const [rotate6, setRotate6] = useState(false);
 
   return (
     <div className="app__cars">
@@ -112,14 +118,44 @@ const Cars = () => {
             <h3>
               Status <img src={images.CarsIconArrow} alt="CarsIconArrow" />
             </h3>
-            <h3 onClick={() => handleOpenWheelSortClick("name")}>
-              Name <img src={images.CarsIconArrow} alt="CarsIconArrow" />
+            <h3
+              onClick={() => {
+                handleOpenWheelSortClick("name");
+                setRotate1(!rotate1);
+              }}
+            >
+              Name{" "}
+              <img
+                src={images.CarsIconArrow}
+                alt="CarsIconArrow"
+                className={`sort-image1 ${rotate1 ? "rotate" : ""}`}
+              />
             </h3>
-            <h3 onClick={() => handleOpenWheelSortClick("power")}>
-              Power <img src={images.CarsIconArrow} alt="CarsIconArrow" />
+            <h3
+              onClick={() => {
+                handleOpenWheelSortClick("power");
+                setRotate2(!rotate2);
+              }}
+            >
+              Power{" "}
+              <img
+                src={images.CarsIconArrow}
+                alt="CarsIconArrow"
+                className={`sort-image2 ${rotate2 ? "rotate" : ""}`}
+              />
             </h3>
-            <h3 onClick={() => handleOpenWheelSortClick("weight")}>
-              Weight <img src={images.CarsIconArrow} alt="CarsIconArrow" />
+            <h3
+              onClick={() => {
+                handleOpenWheelSortClick("weight");
+                setRotate3(!rotate3);
+              }}
+            >
+              Weight{" "}
+              <img
+                src={images.CarsIconArrow}
+                alt="CarsIconArrow"
+                className={`sort-image3 ${rotate3 ? "rotate" : ""}`}
+              />
             </h3>
             <h3>
               Created <img src={images.CarsIconArrow} alt="CarsIconArrow" />
@@ -138,14 +174,44 @@ const Cars = () => {
             <h3>
               Status <img src={images.CarsIconArrow} alt="CarsIconArrow" />
             </h3>
-            <h3 onClick={() => handleGtSortClick("name")}>
-              Name <img src={images.CarsIconArrow} alt="CarsIconArrow" />
+            <h3
+              onClick={() => {
+                handleGtSortClick("name");
+                setRotate4(!rotate4);
+              }}
+            >
+              Name{" "}
+              <img
+                src={images.CarsIconArrow}
+                alt="CarsIconArrow"
+                className={`sort-image4 ${rotate4 ? "rotate" : ""}`}
+              />
             </h3>
-            <h3 onClick={() => handleGtSortClick("power")}>
-              Power <img src={images.CarsIconArrow} alt="CarsIconArrow" />
+            <h3
+              onClick={() => {
+                handleGtSortClick("power");
+                setRotate5(!rotate5);
+              }}
+            >
+              Power{" "}
+              <img
+                src={images.CarsIconArrow}
+                alt="CarsIconArrow"
+                className={`sort-image5 ${rotate5 ? "rotate" : ""}`}
+              />
             </h3>
-            <h3 onClick={() => handleGtSortClick("weight")}>
-              Weight <img src={images.CarsIconArrow} alt="CarsIconArrow" />
+            <h3
+              onClick={() => {
+                handleGtSortClick("weight");
+                setRotate6(!rotate6);
+              }}
+            >
+              Weight{" "}
+              <img
+                src={images.CarsIconArrow}
+                alt="CarsIconArrow"
+                className={`sort-image6 ${rotate6 ? "rotate" : ""}`}
+              />
             </h3>
             <h3>
               Created <img src={images.CarsIconArrow} alt="CarsIconArrow" />

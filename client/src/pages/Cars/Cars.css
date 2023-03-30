@@ -16,30 +16,21 @@
   justify-content: center;
   padding: 0 15px;
 
-  transition: width 0.3s ease-in-out;
   cursor: pointer;
+  transition: width 0.3s ease-in-out;
 }
 
 .app__cars_topDiv-openWheel {
-  background:
-    /* top, transparent black, faked with gradient */ linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
-    /* bottom, image */
-      url("../../assets/formula/screenshot_rss_formula_hybrid_2019_ks_barcelona_18-2-120-14-6-58.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../../assets/formula/screenshot_rss_formula_hybrid_2019_ks_barcelona_18-2-120-14-6-58.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .app__cars_topDiv-GT {
-  background:
-    /* top, transparent black, faked with gradient */ linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
-    /* bottom, image */ url("../../assets/gt/bmwm6gt3.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../../assets/gt/bmwm6gt3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -126,7 +117,7 @@
   user-select: none;
 }
 
-.app__cars-bottomDiv_content-categories h3 img{
+.rotate {
   transform: rotate(180deg);
 }
 

@@ -5,12 +5,12 @@ import { data } from "../../constants";
 
 const Shop = () => {
   const [currentPage, setCurrentPage] = useState(
-    Number(localStorage.getItem("currentPage")) || 1
+    Number(sessionStorage.getItem("currentPage")) || 1
   );
   const itemsPerPage = 9;
   // ------------------------------------------------------
   useEffect(() => {
-    localStorage.setItem("currentPage", currentPage);
+    sessionStorage.setItem("currentPage", currentPage);
   }, [currentPage]);
   // ------------------------------------------------------
 

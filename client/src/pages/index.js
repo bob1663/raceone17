@@ -5,5 +5,6 @@ import News from "./News/News";
 import Shop from "./Shop/Shop";
 import Login from "./Login/Login";
 import Post from "./Post/Post";
+import CarPage from "./CarPage/CarPage";
 
-export { Cars, Contact, Home, News, Shop, Login, Post };
+export { Cars, Contact, Home, News, Shop, Login, Post, CarPage };
