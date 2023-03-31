@@ -26,7 +26,7 @@ const Layout = () => {
           <Route path="/cars" exact element={<Cars />} />
           <Route path="/login" exact element={<Login />} />
           <Route path="/post" exact element={<Post />} />
-          <Route path="/cars/car/:id" exact element={<CarPage />} />
+          <Route path="/test" exact element={<CarPage />} />
         </Routes>
       </div>
       {!isLoginPage && <Footer className="foooter" />}

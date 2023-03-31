@@ -106,7 +106,11 @@ import loginIco from "../assets/loginIco.svg";
 
 import CarsIconArrow from "../assets/CarsIconArrow.svg";
 
+import PurchaseIcon from "../assets/PurchaseIcon.svg";
+
 export default {
+  PurchaseIcon,
+
   CarsIconArrow,
 
   lock,

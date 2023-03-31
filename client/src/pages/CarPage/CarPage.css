@@ -1,0 +1,173 @@
+.app__carPage {
+  display: flex;
+  flex-direction: column;
+}
+
+.app__carPage-topImage {
+  background-attachment: fixed;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.app__carPage-topImage_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.app__carPage-topImage_container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+}
+
+.app__carPage-topImage_container:first-child {
+  height: 50vh;
+  justify-content: flex-end;
+}
+.app__carPage-topImage_container:last-child {
+  height: 50vh;
+  justify-content: flex-end;
+}
+
+.app__carPage-topImage_container h1 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 96px;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.app__carPage-image_downArrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0.9;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  padding: 17px;
+  transition: 0.5s ease;
+  margin-bottom: 25px;
+}
+
+.app__carPage-topImage_container img {
+  width: 16px;
+  height: 16px;
+}
+.app__carPage-image_downArrow:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transition: 0.5s ease;
+}
+
+.app__carPage-purchase {
+  display: flex;
+  background: #01ad27;
+  height: 95px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.app__carPage-purchase:hover {
+  transition: 0.3s ease;
+  background: #b4b4b4;
+}
+
+.app__carPage-purchase p {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-transform: uppercase;
+  gap: 15px;
+}
+
+.app__carPage-specs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #232328;
+  padding: 0 15px;
+}
+
+.app__carPage-specs h2 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 38px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 75px;
+  margin-bottom: 65px;
+}
+
+.app__carPage-specs h2 span {
+  color: #ff6600;
+}
+
+.app__carPage-specs_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.app__carPage-specs_row:last-child {
+  margin-bottom: 100px;
+}
+
+.app__carPage-specs_row h3 {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 29px;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.app__carPage-specs_row h3:first-child {
+  margin-right: 8px;
+}
+
+.app__carPage-specs_row h3:last-child {
+  margin-left: 4px;
+}
+
+.app__carPage-template {
+  background-attachment: fixed;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (max-width: 871px) {
+  .app__carPage-topImage_container h1 {
+    font-size: 40px;
+    line-height: 70px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .app__carPage-topImage_container h1 {
+    font-size: 35px;
+    line-height: 65px;
+  }
+}
