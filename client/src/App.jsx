@@ -8,11 +8,22 @@ import {
   useLocation,
 } from "react-router-dom";
 import { Navbar, Footer } from "./components";
-import { CarPage, Cars, Contact, Home, Login, News, Post, Shop } from "./pages";
+import {
+  CarPage,
+  Cars,
+  Contact,
+  CreatePost,
+  Home,
+  Login,
+  News,
+  Post,
+  Shop,
+} from "./pages";
 
 const Layout = () => {
   const location = useLocation();
   const isLoginPage = location.pathname === "/login";
+  const isCreatePostPage = location.pathname === "/create-post";
 
   return (
     <>
@@ -27,9 +38,10 @@ const Layout = () => {
           <Route path="/login" exact element={<Login />} />
           <Route path="/post" exact element={<Post />} />
           <Route path="/test" exact element={<CarPage />} />
+          <Route path="/create-post" exact element={<CreatePost />} />
         </Routes>
       </div>
-      {!isLoginPage && <Footer className="foooter" />}
+      {!isLoginPage && !isCreatePostPage && <Footer className="foooter" />}
     </>
   );
 };

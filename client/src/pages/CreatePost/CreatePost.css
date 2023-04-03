@@ -1,0 +1,243 @@
+.app__createPost {
+  display: flex;
+  flex-direction: row;
+
+  background: url("../../assets/AuthBg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+  gap: 50px;
+  padding: 160px 70px;
+
+  min-height: 100vh;
+}
+
+.app__createPost-imagePreview {
+  max-width: 500px;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 2px 9px 49px -17px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+
+  height: 820px;
+}
+
+.app__createPost-imagePreview_container {
+  overflow: auto;
+  height: 100%;
+}
+
+.app__createPost-imagePreview_container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.app__createPost-imagePreview_container::-webkit-scrollbar-track {
+  background: #f4f4f4;
+  border-radius: 5px;
+}
+
+.app__createPost-imagePreview_container::-webkit-scrollbar-thumb {
+  background: #e2e2e2;
+  border-radius: 5px;
+}
+
+.app__createPost-imagePreview_container::-webkit-scrollbar-thumb:hover {
+  background: #bebebe;
+}
+
+.app__createPost-addPost {
+  max-width: 1230px;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 2px 9px 49px -17px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  height: 820px;
+}
+
+.app__createPost-addPost span {
+  width: 100%;
+  height: 1px;
+  background: #d9d9d9;
+  margin-top: -15px;
+  margin-bottom: 20px;
+}
+
+.app__createPost-addPost_wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+
+  align-items: start;
+}
+
+.app__createPost-imagePreview h1,
+.app__createPost-addPost h1 {
+  font-family: "Segoe UI";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 25px;
+}
+
+.app__createPost-imagePreview_img {
+  background: #ffeaea;
+  border: 1px solid #e41929;
+  border-radius: 5px;
+  max-width: 384px;
+  max-height: 216px;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 25px;
+}
+
+.app__createPost-addPost_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 460px;
+}
+
+.app__createPost-addPost_container p {
+  font-family: "Segoe UI";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  color: #000000;
+}
+
+.app__createPost-addPost_container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.app__createPost-addPost_container form input[type="text"] {
+  all: unset;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+  height: 40px;
+  max-width: 460px;
+  width: 100%;
+
+  font-family: "Segoe UI";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 1px;
+  color: #000000;
+}
+
+.test {
+  max-width: 460px;
+  width: 100%;
+  height: 170px;
+  background: #ffeaea;
+  border: 1px dashed #e41929;
+  box-shadow: 2px 9px 49px -17px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.app__createPost-addPost_container form textarea {
+  all: unset;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+
+  font-family: "Segoe UI";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 1px;
+  color: #000000;
+
+  max-width: 460px;
+  width: 100%;
+  height: 150px;
+}
+
+.app__createPost-addPost_container form button {
+  all: unset;
+  background: #e41929;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 0;
+  max-width: 165px;
+  width: 100%;
+  margin-top: 30px;
+  cursor: pointer;
+
+  font-family: "Segoe UI";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  color: #ffffff;
+  transition: 0.2s ease;
+}
+
+.app__createPost-addPost_container form button:hover {
+  transition: 0.2s ease;
+  background: #740d16;
+}
+
+.app__createPost-addPost_hint {
+  border: 1px dashed #d9d9d9;
+  border-radius: 5px;
+  padding: 10px;
+  height: 270px;
+  max-width: 270px;
+  width: 100%;
+  margin-top: 35px;
+}
+
+.app__createPost-addPost_hint p {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  display: flex;
+  color: #000000;
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 1325px) {
+  .app__createPost-addPost_wrapper {
+    flex-direction: column-reverse;
+  }
+  .app__createPost-addPost_container {
+    max-width: none;
+  }
+  .app__createPost-addPost {
+    height: 100%;
+    padding: 20px;
+  }
+  .app__createPost-addPost_hint {
+    margin-top: 0;
+    max-width: 460px;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .app__createPost {
+    flex-direction: column-reverse;
+    padding: 160px 15px;
+    align-items: center;
+  }
+  .app__createPost-imagePreview {
+    max-width: none;
+  }
+}

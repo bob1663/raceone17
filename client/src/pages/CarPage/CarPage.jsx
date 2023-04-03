@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "./CarPage.css";
 import { images } from "../../constants";
 
@@ -9,7 +9,7 @@ const CarPage = () => {
       .scrollIntoView({ behavior: "smooth" });
   };
   // -------------------------------------------------------
-
+  
   return (
     <div className="app__carPage">
       <div
