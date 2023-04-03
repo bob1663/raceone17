@@ -108,7 +108,11 @@ import CarsIconArrow from "../assets/CarsIconArrow.svg";
 
 import PurchaseIcon from "../assets/PurchaseIcon.svg";
 
+import AddImageIcon from "../assets/AddImageIcon.svg";
+
 export default {
+  AddImageIcon,
+
   PurchaseIcon,
 
   CarsIconArrow,
