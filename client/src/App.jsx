@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import { Navbar, Footer } from "./components";
 import {
+  AddCar,
   CarPage,
   Cars,
   Contact,
@@ -24,6 +25,7 @@ const Layout = () => {
   const location = useLocation();
   const isLoginPage = location.pathname === "/login";
   const isCreatePostPage = location.pathname === "/create-post";
+  const isAddCarPage = location.pathname === "/add-car";
 
   return (
     <>
@@ -39,9 +41,12 @@ const Layout = () => {
           <Route path="/post" exact element={<Post />} />
           <Route path="/test" exact element={<CarPage />} />
           <Route path="/create-post" exact element={<CreatePost />} />
+          <Route path="/add-car" exact element={<AddCar />} />
         </Routes>
       </div>
-      {!isLoginPage && !isCreatePostPage && <Footer className="foooter" />}
+      {!isLoginPage && !isCreatePostPage && !isAddCarPage && (
+        <Footer className="foooter" />
+      )}
     </>
   );
 };

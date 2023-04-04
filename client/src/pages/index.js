@@ -7,5 +7,17 @@ import Login from "./Login/Login";
 import Post from "./Post/Post";
 import CarPage from "./CarPage/CarPage";
 import CreatePost from "./CreatePost/CreatePost";
+import AddCar from "./AddCar/AddCar";
 
-export { Cars, Contact, Home, News, Shop, Login, Post, CarPage, CreatePost };
+export {
+  Cars,
+  Contact,
+  Home,
+  News,
+  Shop,
+  Login,
+  Post,
+  CarPage,
+  CreatePost,
+  AddCar,
+};

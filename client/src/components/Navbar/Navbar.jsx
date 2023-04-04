@@ -19,6 +19,7 @@ const Navbar = () => {
   const isNewsPage = location.pathname === "/news";
   const isPostPage = location.pathname === "/post";
   const isCreatePostPage = location.pathname === "/create-post";
+  const isAddCarPage = location.pathname === "/add-car";
   // ------------------------------------------------------
   useEffect(() => {
     setActiveLink(location.pathname);
@@ -30,7 +31,13 @@ const Navbar = () => {
   return (
     <nav
       className={`app__navbar ${
-        isPostPage || isShopPage || isNewsPage || isCreatePostPage ? "alt" : ""
+        isPostPage ||
+        isShopPage ||
+        isNewsPage ||
+        isCreatePostPage ||
+        isAddCarPage
+          ? "alt"
+          : ""
       }`}
     >
       <div className="app__navbar-container">
@@ -48,7 +55,11 @@ const Navbar = () => {
         </Link>
         <div
           className={`app__navbar-links ${
-            isPostPage || isShopPage || isNewsPage || isCreatePostPage
+            isPostPage ||
+            isShopPage ||
+            isNewsPage ||
+            isCreatePostPage ||
+            isAddCarPage
               ? "alt"
               : ""
           }`}

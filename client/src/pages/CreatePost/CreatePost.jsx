@@ -1,58 +1,39 @@
 import React, { useState } from "react";
 import "./CreatePost.css";
-import { images } from "../../constants";
 
 const CreatePost = () => {
   const [imagePreviewUrl, setImagePreviewUrl] = useState([]);
-  const [dragging, setDragging] = useState(false);
 
-  const handleDragEnter = (e) => {
+  const handleImageChange = (e) => {
     e.preventDefault();
-    e.stopPropagation();
-    setDragging(true);
-  };
-
-  const handleDragLeave = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setDragging(false);
-  };
-
-  const handleDragOver = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-  };
-
-  const handleDrop = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-
     let reader = new FileReader();
-    let file = e.dataTransfer.files[0];
+    let file = e.target.files[0];
 
     if (
       file &&
-      file.size <= 30000000 &&
-      (file.type === "image/jpeg" || file.type === "image/png")
+      (file.type === "image/jpeg" || file.type === "image/png") &&
+      file.size <= 30000000
     ) {
       reader.onloadend = () => {
         setImagePreviewUrl([...imagePreviewUrl, reader.result]);
       };
       reader.readAsDataURL(file);
     }
-    setDragging(false);
   };
 
-  const handleImageChange = (e) => {
+  const handleDragOver = (e) => {
     e.preventDefault();
+  };
 
+  const handleDrop = (e) => {
+    e.preventDefault();
     let reader = new FileReader();
-    let file = e.target.files[0];
+    let file = e.dataTransfer.files[0];
 
     if (
       file &&
-      file.size <= 30000000 &&
-      (file.type === "image/jpeg" || file.type === "image/png")
+      (file.type === "image/jpeg" || file.type === "image/png") &&
+      file.size <= 30000000
     ) {
       reader.onloadend = () => {
         setImagePreviewUrl([...imagePreviewUrl, reader.result]);
@@ -65,6 +46,7 @@ const CreatePost = () => {
     <div className="app__createPost">
       <div className="app__createPost-imagePreview">
         <h1>Image preview</h1>
+        <span></span>
         <div className="app__createPost-imagePreview_container">
           {/* <div className="app__createPost-imagePreview_img"></div> */}
           {imagePreviewUrl.map((url) => (
@@ -85,33 +67,24 @@ const CreatePost = () => {
               <p style={{ marginBottom: "10px" }}>Add images</p>
               {/* ------------------------------------------------------------------- */}
               <div
-                className={`image-loader ${dragging ? "dragging" : ""}`}
-                onDragEnter={handleDragEnter}
-                onDragLeave={handleDragLeave}
-                onDragOver={handleDragOver}
+                className="image-loader"
                 onDrop={handleDrop}
-                // onClick={() => document.getElementById("file-upload").click()}
+                onDragOver={handleDragOver}
               >
-                <div className="image-loader_img-wrapper">
-                  <img src={images.AddImageIcon} alt="AddImageIcon" />
-                </div>
-                <div className="image-loader_wrapper">
-                  <label htmlFor="file-upload" className="custom-file-upload">
-                    Drag & drop file or browse your computer, you can add more
-                    than one
-                  </label>
-                  <label
-                    htmlFor="file-upload"
-                    className="custom-file-upload_smaller"
-                  >
-                    Support .jpg .png max 30Mb
-                  </label>
-                  <input
-                    id="file-upload"
-                    type="file"
-                    onChange={handleImageChange}
-                  />
-                </div>
+                <label htmlFor="file-upload">
+                  Drag & drop file or browse your computer, you can add more
+                  than one
+                </label>
+                <label htmlFor="file-upload">
+                  Support .jpg .png max 30Mb, recommended image size 1140x450
+                </label>
+                <label htmlFor="file-upload">Add image</label>
+                <input
+                  id="file-upload"
+                  type="file"
+                  onChange={handleImageChange}
+                  accept="image/jpeg, image/png"
+                />
               </div>
               {/* ------------------------------------------------------------------- */}
               <p style={{ marginTop: "20px", marginBottom: "5px" }}>Title</p>
