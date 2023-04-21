@@ -34,7 +34,7 @@ const Layout = () => {
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/shop" exact element={<Shop />} />
-          <Route path="/news" exact element={<News />} />
+          <Route path="/posts" exact element={<News />} />
           <Route path="/contact" exact element={<Contact />} />
           <Route path="/cars" exact element={<Cars />} />
           <Route path="/login" exact element={<Login />} />

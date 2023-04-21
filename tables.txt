@@ -1,0 +1,22 @@
+HOME {
+ imgUrl,
+ sellfyLink,
+ newsPostLink,
+}
+
+CAR {
+ name: string,
+ price: number,
+ power: number,
+ wheelbase: number,
+ weight: number,
+ sellfyLink,
+ imgUrl,
+}
+
+POST {
+ imgUrl: array,
+ title: string,
+ subtitle: string,
+ description: string,
+}

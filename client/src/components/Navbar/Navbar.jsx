@@ -16,7 +16,7 @@ const Navbar = () => {
   // ------------------------------------------------------
   const location = useLocation();
   const isShopPage = location.pathname === "/shop";
-  const isNewsPage = location.pathname === "/news";
+  const isNewsPage = location.pathname === "/posts";
   const isPostPage = location.pathname === "/post";
   const isCreatePostPage = location.pathname === "/create-post";
   const isAddCarPage = location.pathname === "/add-car";
@@ -95,13 +95,13 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                to="/news"
+                to="/posts"
                 className={`app__navbar-links_item ${
-                  activeLink === "/news" ? "active" : ""
+                  activeLink === "/posts" ? "active" : ""
                 }`}
                 onClick={() => {
-                  setActiveLink("/news");
-                  localStorage.setItem("activeLink", "/news");
+                  setActiveLink("/posts");
+                  localStorage.setItem("activeLink", "/posts");
                 }}
               >
                 news
@@ -202,13 +202,13 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  to="/news"
+                  to="/posts"
                   className={`app__navbar-smallscreen_links-item ${
-                    activeLink === "/news" ? "active" : ""
+                    activeLink === "/posts" ? "active" : ""
                   }`}
                   onClick={() => {
-                    setActiveLink("/news");
-                    localStorage.setItem("activeLink", "/news");
+                    setActiveLink("/posts");
+                    localStorage.setItem("activeLink", "/posts");
                   }}
                 >
                   news
