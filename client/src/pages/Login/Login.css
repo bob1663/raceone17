@@ -40,7 +40,8 @@
   color: #331919;
 }
 
-.app__login-container_p {
+.app__login-container_p,
+.alert {
   font-family: var(--font-sans);
   font-weight: 400;
   font-size: 17px;
@@ -49,6 +50,10 @@
   color: #876666;
   opacity: 0.8;
   margin-bottom: 30px;
+}
+
+.alert{
+  color: #e41929;
 }
 
 .app__login-container form {
@@ -66,6 +71,7 @@
   opacity: 0.7;
 }
 
+.app__login-container form input[type="email"],
 .app__login-container form input[type="text"],
 .app__login-container form input[type="password"] {
   all: unset;
@@ -86,6 +92,7 @@
 }
 
 .app__login-container form input[type="text"]:focus,
+.app__login-container form input[type="email"]:focus,
 .app__login-container form input[type="password"]:focus {
   border-bottom: 1px solid #e41929;
 }

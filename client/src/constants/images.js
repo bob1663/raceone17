@@ -3,6 +3,7 @@ import MCBg2 from "../assets/MainCarouselBg2.png";
 import MCBg3 from "../assets/MainCarouselBg3.png";
 import MCBg4 from "../assets/MainCarouselBg4.png";
 import MCBg5 from "../assets/MainCarouselBg5.png";
+import MCBg6 from "../assets/MainCarouselBg6.jpg";
 
 import ShopCard1 from "../assets/shop/ShopCard1.png";
 import ShopCard2 from "../assets/shop/ShopCard2.png";
@@ -50,6 +51,7 @@ import NewsCard18 from "../assets/news/NewsCard18.png";
 import NewsCard19 from "../assets/news/NewsCard19.jpg";
 import NewsCard20 from "../assets/news/NewsCard20.jpg";
 import NewsCard21 from "../assets/news/NewsCard21.jpg";
+import NewsCard22 from '../assets/news/NewsCard22.jpg';
 
 import ShareIcon from "../assets/ShareIcon2.svg";
 import ReadMoreIcon from "../assets/ReadMoreIcon2.svg";
@@ -158,6 +160,7 @@ export default {
   MCBg3,
   MCBg4,
   MCBg5,
+  MCBg6,
 
   ShopCard1,
   ShopCard2,
@@ -205,7 +208,8 @@ export default {
   NewsCard19,
   NewsCard20,
   NewsCard21,
-
+  NewsCard22,
+  
   ShareIcon,
   ReadMoreIcon,
 

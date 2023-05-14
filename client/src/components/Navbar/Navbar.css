@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   height: 100px;
-
+  user-select: none;
   transition: 0.5s ease;
 
   position: absolute;
@@ -116,6 +116,32 @@
   margin-right: 25px;
 }
 
+.admin-block {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.admin-block-dropdown.open {
+  display: flex;
+  margin-top: 30px;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  width: 100px;
+  gap: 20px;
+  padding: 10px;
+}
+
+.admin-block-dropdown.close {
+  display: none;
+}
+
+.app__navbar.alt .admin-block-dropdown.open {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+}
+
 @media screen and (max-width: 1140px) {
   .app__navbar {
     background: #ffffff;
@@ -166,6 +192,8 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     width: 100%;
   }
+
+    
   .app__navbar-smallscreen_links-item {
     font-family: var(--font-sans);
     font-weight: 700;

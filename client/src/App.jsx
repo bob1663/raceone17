@@ -3,6 +3,7 @@ import "./App.css";
 import {
   BrowserRouter,
   Link,
+  Navigate,
   Route,
   Routes,
   useLocation,
@@ -20,11 +21,14 @@ import {
   Post,
   Shop,
 } from "./pages";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { fetchAuthMe, selectIsAuth } from "./redux/slices/auth";
 
 const Layout = () => {
   const location = useLocation();
   const isLoginPage = location.pathname === "/login";
-  const isCreatePostPage = location.pathname === "/create-post";
+  const isCreatePostPage = location.pathname === "/add-post";
   const isAddCarPage = location.pathname === "/add-car";
 
   return (
@@ -38,10 +42,11 @@ const Layout = () => {
           <Route path="/contact" exact element={<Contact />} />
           <Route path="/cars" exact element={<Cars />} />
           <Route path="/login" exact element={<Login />} />
-          <Route path="/post" exact element={<Post />} />
-          <Route path="/test" exact element={<CarPage />} />
-          <Route path="/create-post" exact element={<CreatePost />} />
+          <Route path="/posts/:id" exact element={<Post />} />
+          <Route path="/cars/:id" exact element={<CarPage />} />
+          <Route path="/add-post" exact element={<CreatePost />} />
           <Route path="/add-car" exact element={<AddCar />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
       {!isLoginPage && !isCreatePostPage && !isAddCarPage && (
@@ -52,6 +57,11 @@ const Layout = () => {
 };
 
 const App = () => {
+  const dispatch = useDispatch();
+  const isAuth = useSelector(selectIsAuth);
+  useEffect(() => {
+    dispatch(fetchAuthMe());
+  }, []);
   return (
     <div className="app">
       <BrowserRouter>

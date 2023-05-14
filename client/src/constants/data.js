@@ -26,6 +26,11 @@ const home = [
     title: "FORMULA RSS 2013",
     description: "NOW AVAILABLE",
   },
+  {
+    imgUrl: images.MCBg6,
+    title: "FORMULA HYBRID 2023",
+    description: "IS OUT!",
+  },
 ];
 
 const shop = [
@@ -319,6 +324,14 @@ const news = [
     newsDate: "January 4, 2023",
     newsDescription:
       "Relive the glory days of Formula 1 with the release of the 1979 season. This was a time when the sport was at its most exciting and unpredictable, with legends such as Senna, Prost, and Mansell battling it out on the track. Now you can experience it all for yourself with Formula 1 79. Get ready to take on some of the greatest drivers of all time and claim your place in the history books!",
+  },
+  {
+    imgNews: images.NewsCard22,
+    titleNews: "FORMULA 1 2023 RELEASED",
+    newsTopic: "Announcement, Formula 1 2023",
+    newsDate: "May 14, 2023",
+    newsDescription:
+      "We are proud to announce that we have released our latest racing masterpiece – the Formula 1 2023. This car is another step forward in our expertise and craft, incorporating advanced techniques and graphical design to create the best Formula racing car. Starting with the design, the Formula 1 2023 progresses significantly from last year. Some technical regulation changes and the advancement of time and familiarity this season presented the opportunity to introduce more complexity to the bodywork. The ventilation design alone is a masterpiece, let alone the rest of the car.",
   },
 ];
 

@@ -1,77 +1,35 @@
 import React, { useState, useEffect } from "react";
 import "./Shop.css";
-import { ShopCard } from "../../components";
+import { Loader, ShopCard } from "../../components";
 import { data } from "../../constants";
+import axios from "../../axios";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchCars } from "../../redux/slices/cars";
 
 const Shop = () => {
-  const [currentPage, setCurrentPage] = useState(
-    Number(sessionStorage.getItem("currentPage")) || 1
-  );
-  const itemsPerPage = 9;
-  // ------------------------------------------------------
+  const dispatch = useDispatch();
+  const { cars } = useSelector((state) => state.cars);
+
+  const isCarsLoading = cars.status === "loading";
+
   useEffect(() => {
-    sessionStorage.setItem("currentPage", currentPage);
-  }, [currentPage]);
-  // ------------------------------------------------------
+    dispatch(fetchCars());
+  }, []);
 
-  const handleClick = (event) => {
-    setCurrentPage(Number(event.target.id));
-    window.scrollTo(0, 0);
-  };
+  console.log(cars);
 
-  const handlePrevClick = () => {
-    if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
-      window.scrollTo(0, 0);
-    }
-  };
-
-  const handleNextClick = () => {
-    if (currentPage < Math.ceil(data.shop.length / itemsPerPage)) {
-      setCurrentPage(currentPage + 1);
-      window.scrollTo(0, 0);
-    }
-  };
-
-  const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = data.shop.slice(indexOfFirstItem, indexOfLastItem);
-
-  const renderItems = currentItems.map((shop) => (
-    <ShopCard data={shop} key={shop.titleShop} />
-  ));
-
-  const pageNumbers = [];
-  for (let i = 1; i <= Math.ceil(data.shop.length / itemsPerPage); i++) {
-    pageNumbers.push(i);
+  if (isCarsLoading) {
+    return <Loader />;
   }
-
-  const renderPageNumbers = pageNumbers.map((number) => (
-    <li
-      key={number}
-      id={number}
-      onClick={handleClick}
-      style={{
-        backgroundColor: number === currentPage ? "#FF0000" : "",
-        color: number === currentPage ? "#ffffff" : "",
-      }}
-    >
-      {number}
-    </li>
-  ));
 
   return (
     <div className="app__shop">
-      <div className="app__shop-container">{renderItems}</div>
-      <ul id="page-numbers">
-        <li onClick={handlePrevClick} className="special-item">
-          Prev
-        </li>
-        {renderPageNumbers}
-        <li onClick={handleNextClick} className="special-item">
-          Next
-        </li>
-      </ul>
+      <div className="app__shop-container">
+        {cars &&
+          cars.items.map((obj, index) => (
+            <ShopCard data={obj} id={obj._id} key={obj._id} />
+          ))}
+      </div>
     </div>
   );
 };

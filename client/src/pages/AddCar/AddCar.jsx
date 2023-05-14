@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import "./AddCar.css";
+import { useSelector } from "react-redux";
+import { selectIsAuth } from "../../redux/slices/auth";
+import { Navigate } from "react-router-dom";
 
 const AddCar = () => {
+  
+
   const [values, setValues] = useState({
     price: "",
     peakPower: "",
@@ -62,6 +67,12 @@ const AddCar = () => {
       reader.readAsDataURL(file);
     }
   };
+
+  const isAuth = useSelector(selectIsAuth);
+  if (!isAuth) {
+    return <Navigate to="/" />;
+  }
+  
   return (
     <div className="app__addCar">
       <div className="app__addCar-container">

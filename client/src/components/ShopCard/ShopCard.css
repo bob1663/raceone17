@@ -6,7 +6,8 @@
 }
 
 .app__shopCard img {
-  height: auto;
+  height: 213px;
+  object-fit: cover;
   width: 100%;
   max-width: 380px;
   border-radius: 6px;
@@ -28,7 +29,7 @@
   margin-top: 10px;
 }
 
-.app__shopCard-price button {
+.app__shopCard-price a {
   all: unset;
   cursor: pointer;
   background: #029c00;
@@ -42,13 +43,13 @@
   transition: 0.5s ease;
 }
 
-.app__shopCard-price button:hover {
+.app__shopCard-price a:hover {
   transition: 0.5s ease;
   background: #3dc73b;
 }
 
 @media (max-width: 540px) {
-    .app__shopCard {
-        justify-self: center;
-    }
+  .app__shopCard {
+    justify-self: center;
+  }
 }

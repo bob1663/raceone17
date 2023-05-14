@@ -20,7 +20,7 @@ export const postCreateValidation = [
   body("description", "Enter post description")
     .isLength({ min: 3 })
     .isString(),
-  body("imgUrl", "Wrong image link").isString(),
+  /* body("imgUrl", "Wrong image link").isString(), */
 ];
 
 export const carCreateValidation = [
@@ -31,4 +31,5 @@ export const carCreateValidation = [
   body("weight", "Enter car weight").isLength({ min: 2 }).isNumeric(),
   body("sellfyLink", "Wrong sellfy link").isString(),
   body("imgUrl", "Wrong image link").isString(),
+  body("templateUrl", "Wrong template image link").isString(),
 ];

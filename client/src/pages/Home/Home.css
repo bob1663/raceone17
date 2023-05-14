@@ -44,7 +44,7 @@
 
   transition: width 0.5s ease 0.5s;
 
-  
+  user-select: none;
 
   
 }

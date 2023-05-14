@@ -66,6 +66,7 @@ export const create = async (req, res) => {
       weight: req.body.weight,
       sellfyLink: req.body.sellfyLink,
       imgUrl: req.body.imgUrl,
+      templateUrl: req.body.templateUrl,
       user: req.userId,
     });
 
@@ -96,6 +97,7 @@ export const update = async (req, res) => {
         weight: req.body.weight,
         sellfyLink: req.body.sellfyLink,
         imgUrl: req.body.imgUrl,
+        templateUrl: req.body.templateUrl,
         user: req.userId,
       }
     );

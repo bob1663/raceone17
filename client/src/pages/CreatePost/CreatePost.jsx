@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import "./CreatePost.css";
+import { useSelector } from "react-redux";
+import { selectIsAuth } from "../../redux/slices/auth";
+import { Navigate } from "react-router-dom";
 
 const CreatePost = () => {
   const [imagePreviewUrl, setImagePreviewUrl] = useState([]);
@@ -41,6 +44,11 @@ const CreatePost = () => {
       reader.readAsDataURL(file);
     }
   };
+
+  const isAuth = useSelector(selectIsAuth);
+  if (!isAuth) {
+    return <Navigate to="/" />;
+  }
 
   return (
     <div className="app__createPost">

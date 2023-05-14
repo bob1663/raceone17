@@ -12,6 +12,7 @@ CAR {
  weight: number,
  sellfyLink,
  imgUrl,
+ templateUrl,
 }
 
 POST {
