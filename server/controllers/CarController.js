@@ -2,7 +2,7 @@ import CarModel from "../models/Car.js";
 
 export const getAll = async (req, res) => {
   try {
-    const cars = await CarModel.find().populate("user").exec();
+    const cars = await CarModel.find().populate({ path: "user", select: ["name"] }).exec();
 
     res.json(cars);
   } catch (err) {
