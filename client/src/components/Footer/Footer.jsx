@@ -26,7 +26,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="app__footer-rights">
-          <p>© 2023 Race Sim Studio. All rights reserved.</p>
+          <p>© 2023 RaceOne17. All rights reserved.</p>
         </div>
       </div>
     </footer>
